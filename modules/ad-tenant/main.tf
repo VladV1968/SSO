@@ -50,6 +50,7 @@ resource "azuread_user" "org_role" {
   password              = random_password.user[each.key].result
   force_password_change = true
   account_enabled       = true
+  usage_location        = "US"
 
   lifecycle {
     ignore_changes = [password, force_password_change]

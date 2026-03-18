@@ -70,7 +70,7 @@ inputs = {
   # Organizations to provision. Add/remove orgs here.
   # Each org creates: 5 env × 3 role security groups, 3 users, 15 memberships.
   #
-  # To deploy all 3 orgs:
+  # To deploy other orgs e.g. contoso and fabrikam, add them to the tenant_orgs map:
   #   tenant_orgs = {
   #     northwind = { code = "nw" }
   #     contoso   = { code = "cs" }
