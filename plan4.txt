@@ -1,0 +1,2062 @@
+14:05:19.259 STDOUT [.] terraform: Acquiring state lock. This may take a few moments...
+14:05:27.801 STDOUT [.] terraform: random_password.user["sim1-northwind-viewer"]: Refreshing state... [id=none]
+14:05:27.801 STDOUT [.] terraform: random_password.user["sim1-northwind-admin"]: Refreshing state... [id=none]
+14:05:27.801 STDOUT [.] terraform: random_password.user["sim1-northwind-user"]: Refreshing state... [id=none]
+14:05:27.801 STDOUT [.] terraform: random_password.user["sim1-fabrikam-viewer"]: Refreshing state... [id=none]
+14:05:27.801 STDOUT [.] terraform: random_password.user["sim1-contoso-admin"]: Refreshing state... [id=none]
+14:05:27.802 STDOUT [.] terraform: random_password.user["sim1-fabrikam-admin"]: Refreshing state... [id=none]
+14:05:27.802 STDOUT [.] terraform: random_password.user["sim1-fabrikam-user"]: Refreshing state... [id=none]
+14:05:27.802 STDOUT [.] terraform: random_password.user["sim1-contoso-viewer"]: Refreshing state... [id=none]
+14:05:27.802 STDOUT [.] terraform: random_password.user["sim1-contoso-user"]: Refreshing state... [id=none]
+14:05:33.260 STDOUT [.] terraform: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-admin"]: Refreshing state... [id=10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/sSwiqjvrWESJ7Oy6GlkQHlwPi7bX23NIg0dWqKmGRjc]
+14:05:33.260 STDOUT [.] terraform: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-viewer"]: Refreshing state... [id=10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/OdWWe9YFc0mABVqHA_DC_TdTBMT-e0xBsInBxuRiV2M]
+14:05:33.260 STDOUT [.] terraform: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"]: Refreshing state... [id=10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/6T-FFB3w8UOBYvrRBUrXqJO0kew7L8lDrpSevZw7BKU]
+14:05:33.263 STDOUT [.] terraform: azuread_claims_mapping_policy.nxcloud_saml["sim1"]: Refreshing state... [id=be2ce858-a4e6-43f7-8560-ef102ee946b6]
+14:05:33.267 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-dev-viewer"]: Refreshing state... [id=d8b7de74-791a-4535-b8d0-684106325113]
+14:05:33.267 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa2-viewer"]: Refreshing state... [id=b11bbe96-46e3-4783-b322-8c0389a366c0]
+14:05:33.267 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-dev-user"]: Refreshing state... [id=c201ca87-9214-4f36-b9a3-88b32ad3e7bf]
+14:05:33.267 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-prd-admin"]: Refreshing state... [id=ac391fda-e490-40ac-92ef-d8c908747671]
+14:05:33.267 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-prd-viewer"]: Refreshing state... [id=10d28d85-4ff9-4cee-9be5-63bb04df07cc]
+14:05:33.268 STDOUT [.] terraform: azuread_application.nxcloud["sim1"]: Refreshing state... [id=/applications/e8687e54-6adb-4959-9db1-305b334ee145]
+14:05:35.828 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa-admin"]: Refreshing state... [id=54c1f487-ab2e-4d1d-ab22-1597d7c4a150]
+14:05:36.798 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-dev-admin"]: Refreshing state... [id=a45e8721-82a0-4dde-8601-2874802d85e5]
+14:05:38.889 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-prd-admin"]: Refreshing state... [id=e2c6233c-bf74-4861-b92c-c92f0ae0bf90]
+14:05:40.593 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-prd-admin"]: Refreshing state... [id=bcfe0d85-1bb6-4bed-95d8-86837600ba80]
+14:06:01.315 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-tst-viewer"]: Refreshing state... [id=b33e6e61-4875-409e-99da-48cabc50d6d5]
+14:06:16.704 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa2-admin"]: Refreshing state... [id=a6ac68c1-3fc5-4517-bc48-ef3ae6d12128]
+14:06:18.834 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa2-admin"]: Refreshing state... [id=e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0]
+14:06:26.805 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa2-admin"]: Refreshing state... [id=95aa3140-8d44-42b2-ba23-b85c572add5c]
+14:06:28.469 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-prd-user"]: Refreshing state... [id=c9f09834-4b2c-4471-ba55-514c7801d5b3]
+14:06:30.703 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa2-user"]: Refreshing state... [id=eb00cd3b-f098-449e-8649-ef7bece61d74]
+14:06:32.824 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-tst-user"]: Refreshing state... [id=92a519ce-b94b-44de-af3d-b105139f629e]
+14:06:37.827 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-prd-user"]: Refreshing state... [id=6e25067e-f1c9-41d6-ae3a-6b661dbb71ad]
+14:06:39.949 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa-admin"]: Refreshing state... [id=9ed66a80-184e-4e0f-bda6-ef0b82a2911e]
+14:06:40.983 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-tst-admin"]: Refreshing state... [id=5eb3e670-9560-4b10-88b8-e9f2a7076237]
+14:07:07.130 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-prd-user"]: Refreshing state... [id=f0964ba0-712e-432d-824b-f4e0f58d20ff]
+14:07:21.288 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-tst-viewer"]: Refreshing state... [id=82e9edfe-2124-4fc6-b403-10d7b9df2c6f]
+14:07:25.725 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-dev-admin"]: Refreshing state... [id=9bdc7386-79cd-4f41-a3b0-7216a971eefb]
+14:07:34.346 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa-user"]: Refreshing state... [id=cb687926-fea6-460c-b4e2-c05783120ef1]
+14:07:35.423 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-dev-viewer"]: Refreshing state... [id=b9d842ca-e8e1-4503-866e-04d9ca0fd869]
+14:07:36.493 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa2-viewer"]: Refreshing state... [id=4600ced9-3265-4157-9c79-6a9b7ec28e35]
+14:07:37.576 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa-viewer"]: Refreshing state... [id=e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f]
+14:07:41.187 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-tst-viewer"]: Refreshing state... [id=fcda5c7d-57d1-46fb-9292-a924660faaad]
+14:07:45.268 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-dev-admin"]: Refreshing state... [id=c44b348f-2bd2-4992-bf09-48b7a504c822]
+14:07:46.330 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-tst-user"]: Refreshing state... [id=ee37a891-595b-4082-a432-c36d99bde618]
+14:08:13.406 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-prd-viewer"]: Refreshing state... [id=f5fedb8e-08b5-43f5-87b9-aa54de71f62b]
+14:08:27.171 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-tst-admin"]: Refreshing state... [id=3c6ed00e-43cc-4cc7-a299-fe497b51e8a6]
+14:08:28.297 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-prd-viewer"]: Refreshing state... [id=15f39352-f836-44d4-a8ff-8a1a84ec43f9]
+14:08:29.803 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-tst-user"]: Refreshing state... [id=df416e17-c1bc-4f20-a68e-6de6e9218b92]
+14:08:30.848 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa-admin"]: Refreshing state... [id=1df7c963-f4f1-4a17-a6ff-87c1e1fc09d4]
+14:08:31.697 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa-user"]: Refreshing state... [id=46fa650f-1ce3-4c48-b805-25c330e8b085]
+14:08:31.702 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa2-viewer"]: Refreshing state... [id=633043b2-dd09-4070-9af8-a7eb090efc58]
+14:08:34.559 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa2-user"]: Refreshing state... [id=3ff456b9-a900-48da-826e-5373a5c456be]
+14:08:36.321 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-dev-viewer"]: Refreshing state... [id=5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11]
+14:08:36.327 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa-viewer"]: Refreshing state... [id=4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac]
+14:08:36.331 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-qa-viewer"]: Refreshing state... [id=7524c970-8200-426d-87af-87ef12975528]
+14:08:36.333 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-qa-user"]: Refreshing state... [id=95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa]
+14:08:38.386 STDOUT [.] terraform: azuread_group.org_env_role["sim1-contoso-dev-user"]: Refreshing state... [id=9f92c56b-2419-4001-b65c-19ca6ffbc422]
+14:08:38.990 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-tst-admin"]: Refreshing state... [id=160562c1-738b-482d-8e6a-a6ed61b6b196]
+14:08:38.990 STDOUT [.] terraform: azuread_group.org_env_role["sim1-northwind-dev-user"]: Refreshing state... [id=f9614dd9-2594-4c25-b5ba-ee361b747b35]
+14:08:38.992 STDOUT [.] terraform: azuread_group.org_env_role["sim1-fabrikam-qa2-user"]: Refreshing state... [id=3de6935e-640e-47c7-96eb-62b3c197475f]
+14:08:39.440 STDOUT [.] terraform: azuread_user.org_role["sim1-northwind-viewer"]: Refreshing state... [id=4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:39.449 STDOUT [.] terraform: azuread_user.org_role["sim1-fabrikam-viewer"]: Refreshing state... [id=dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:39.695 STDOUT [.] terraform: azuread_user.org_role["sim1-fabrikam-user"]: Refreshing state... [id=b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:39.700 STDOUT [.] terraform: azuread_user.org_role["sim1-northwind-user"]: Refreshing state... [id=b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:39.890 STDOUT [.] terraform: azuread_user.org_role["sim1-northwind-admin"]: Refreshing state... [id=48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:39.956 STDOUT [.] terraform: azuread_user.org_role["sim1-contoso-viewer"]: Refreshing state... [id=7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:40.188 STDOUT [.] terraform: azuread_user.org_role["sim1-fabrikam-admin"]: Refreshing state... [id=924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:40.188 STDOUT [.] terraform: azuread_user.org_role["sim1-contoso-admin"]: Refreshing state... [id=aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:40.191 STDOUT [.] terraform: azuread_user.org_role["sim1-contoso-user"]: Refreshing state... [id=14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:40.744 STDOUT [.] terraform: terraform_data.nxcloud_saml_entity_id["sim1"]: Refreshing state... [id=25413cf6-a289-fba5-ad06-3c41994fc2b2]
+14:08:40.745 STDOUT [.] terraform: azuread_service_principal.nxcloud["sim1"]: Refreshing state... [id=10e1e6b0-94d0-40ed-ab96-15d0cd5bf450]
+14:08:42.232 STDOUT [.] terraform: terraform_data.nxcloud_saml_signing_cert["sim1"]: Refreshing state... [id=d8ac7f1f-43a9-7522-f85d-643b0502e6b1]
+14:08:42.233 STDOUT [.] terraform: azuread_service_principal_claims_mapping_policy_assignment.nxcloud_saml["sim1"]: Refreshing state... [id=10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/claimsMappingPolicy/be2ce858-a4e6-43f7-8560-ef102ee946b6]
+14:08:50.481 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa2-admin"]: Refreshing state... [id=a6ac68c1-3fc5-4517-bc48-ef3ae6d12128/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:50.481 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-tst-viewer"]: Refreshing state... [id=fcda5c7d-57d1-46fb-9292-a924660faaad/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-prd-viewer"]: Refreshing state... [id=f5fedb8e-08b5-43f5-87b9-aa54de71f62b/member/4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-tst-viewer"]: Refreshing state... [id=b33e6e61-4875-409e-99da-48cabc50d6d5/member/4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-prd-admin"]: Refreshing state... [id=bcfe0d85-1bb6-4bed-95d8-86837600ba80/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-tst-viewer"]: Refreshing state... [id=82e9edfe-2124-4fc6-b403-10d7b9df2c6f/member/7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa-viewer"]: Refreshing state... [id=7524c970-8200-426d-87af-87ef12975528/member/4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:50.482 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-prd-user"]: Refreshing state... [id=6e25067e-f1c9-41d6-ae3a-6b661dbb71ad/member/14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:50.483 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa2-user"]: Refreshing state... [id=eb00cd3b-f098-449e-8649-ef7bece61d74/member/14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:50.483 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-dev-viewer"]: Refreshing state... [id=5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11/member/7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:50.711 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-tst-admin"]: Refreshing state... [id=5eb3e670-9560-4b10-88b8-e9f2a7076237/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:50.712 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-dev-admin"]: Refreshing state... [id=9bdc7386-79cd-4f41-a3b0-7216a971eefb/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:50.712 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-tst-admin"]: Refreshing state... [id=3c6ed00e-43cc-4cc7-a299-fe497b51e8a6/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:50.714 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa2-viewer"]: Refreshing state... [id=4600ced9-3265-4157-9c79-6a9b7ec28e35/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:50.732 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa-viewer"]: Refreshing state... [id=e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f/member/7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:50.732 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-dev-viewer"]: Refreshing state... [id=d8b7de74-791a-4535-b8d0-684106325113/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:50.732 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-prd-user"]: Refreshing state... [id=f0964ba0-712e-432d-824b-f4e0f58d20ff/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:50.732 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-prd-viewer"]: Refreshing state... [id=10d28d85-4ff9-4cee-9be5-63bb04df07cc/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:50.755 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa-user"]: Refreshing state... [id=cb687926-fea6-460c-b4e2-c05783120ef1/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:50.793 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa2-admin"]: Refreshing state... [id=95aa3140-8d44-42b2-ba23-b85c572add5c/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:50.955 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa2-user"]: Refreshing state... [id=3ff456b9-a900-48da-826e-5373a5c456be/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:50.959 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-dev-admin"]: Refreshing state... [id=c44b348f-2bd2-4992-bf09-48b7a504c822/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:50.962 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa-user"]: Refreshing state... [id=95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa/member/14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:50.966 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-dev-admin"]: Refreshing state... [id=a45e8721-82a0-4dde-8601-2874802d85e5/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:50.980 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-prd-user"]: Refreshing state... [id=c9f09834-4b2c-4471-ba55-514c7801d5b3/member/b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:50.993 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa-user"]: Refreshing state... [id=46fa650f-1ce3-4c48-b805-25c330e8b085/member/b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:50.993 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-tst-user"]: Refreshing state... [id=ee37a891-595b-4082-a432-c36d99bde618/member/b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:50.998 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-prd-viewer"]: Refreshing state... [id=15f39352-f836-44d4-a8ff-8a1a84ec43f9/member/7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:51.024 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa2-viewer"]: Refreshing state... [id=633043b2-dd09-4070-9af8-a7eb090efc58/member/4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:51.063 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa2-viewer"]: Refreshing state... [id=b11bbe96-46e3-4783-b322-8c0389a366c0/member/7b96d539-05d6-4973-8005-5a8703f0c2fd]
+14:08:51.229 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-dev-user"]: Refreshing state... [id=c201ca87-9214-4f36-b9a3-88b32ad3e7bf/member/b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:51.234 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-dev-viewer"]: Refreshing state... [id=b9d842ca-e8e1-4503-866e-04d9ca0fd869/member/4d8486e4-e9cb-4303-8446-711f07ad2e06]
+14:08:51.237 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-tst-user"]: Refreshing state... [id=92a519ce-b94b-44de-af3d-b105139f629e/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:51.239 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-tst-user"]: Refreshing state... [id=df416e17-c1bc-4f20-a68e-6de6e9218b92/member/14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:51.252 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-prd-admin"]: Refreshing state... [id=e2c6233c-bf74-4861-b92c-c92f0ae0bf90/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:51.264 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-prd-admin"]: Refreshing state... [id=ac391fda-e490-40ac-92ef-d8c908747671/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:51.281 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa-admin"]: Refreshing state... [id=54c1f487-ab2e-4d1d-ab22-1597d7c4a150/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc]
+14:08:51.288 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa-admin"]: Refreshing state... [id=9ed66a80-184e-4e0f-bda6-ef0b82a2911e/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:51.317 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-dev-user"]: Refreshing state... [id=9f92c56b-2419-4001-b65c-19ca6ffbc422/member/14853fe9-f01d-43f1-8162-fad1054ad7a8]
+14:08:51.357 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-dev-user"]: Refreshing state... [id=f9614dd9-2594-4c25-b5ba-ee361b747b35/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4]
+14:08:51.531 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-tst-admin"]: Refreshing state... [id=160562c1-738b-482d-8e6a-a6ed61b6b196/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:51.540 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa-viewer"]: Refreshing state... [id=4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c]
+14:08:51.549 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-fabrikam-qa2-user"]: Refreshing state... [id=3de6935e-640e-47c7-96eb-62b3c197475f/member/b1748142-e0c5-4057-83d7-4fbe24e6f890]
+14:08:51.557 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-northwind-qa-admin"]: Refreshing state... [id=1df7c963-f4f1-4a17-a6ff-87c1e1fc09d4/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114]
+14:08:51.559 STDOUT [.] terraform: azuread_group_member.user_env_role["sim1-contoso-qa2-admin"]: Refreshing state... [id=e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e]
+14:08:52.117 STDOUT [.] terraform: Terraform used the selected providers to generate the following execution
+14:08:52.117 STDOUT [.] terraform: plan. Resource actions are indicated with the following symbols:
+14:08:52.117 STDOUT [.] terraform:   - destroy
+14:08:52.117 STDOUT [.] terraform: Terraform will perform the following actions:
+14:08:52.117 STDOUT [.] terraform:   # azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-admin"] will be destroyed
+14:08:52.117 STDOUT [.] terraform:   # (because azuread_app_role_assignment.nxcloud_contoso is not in configuration)
+14:08:52.117 STDOUT [.] terraform:   - resource "azuread_app_role_assignment" "nxcloud_contoso" {
+14:08:52.117 STDOUT [.] terraform:       - app_role_id            = "00000000-0000-0000-0000-000000000000" -> null
+14:08:52.117 STDOUT [.] terraform:       - id                     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/sSwiqjvrWESJ7Oy6GlkQHlwPi7bX23NIg0dWqKmGRjc" -> null
+14:08:52.117 STDOUT [.] terraform:       - principal_display_name = "Admin ΓÇô Contoso (sim1)" -> null
+14:08:52.117 STDOUT [.] terraform:       - principal_object_id    = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.117 STDOUT [.] terraform:       - principal_type         = "User" -> null
+14:08:52.117 STDOUT [.] terraform:       - resource_display_name  = "nx cloud" -> null
+14:08:52.117 STDOUT [.] terraform:       - resource_object_id     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450" -> null
+14:08:52.117 STDOUT [.] terraform:     }
+14:08:52.117 STDOUT [.] terraform:   # azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"] will be destroyed
+14:08:52.117 STDOUT [.] terraform:   # (because azuread_app_role_assignment.nxcloud_contoso is not in configuration)
+14:08:52.117 STDOUT [.] terraform:   - resource "azuread_app_role_assignment" "nxcloud_contoso" {
+14:08:52.117 STDOUT [.] terraform:       - app_role_id            = "00000000-0000-0000-0000-000000000000" -> null
+14:08:52.118 STDOUT [.] terraform:       - id                     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/6T-FFB3w8UOBYvrRBUrXqJO0kew7L8lDrpSevZw7BKU" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_display_name = "User ΓÇô Contoso (sim1)" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_object_id    = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_type         = "User" -> null
+14:08:52.118 STDOUT [.] terraform:       - resource_display_name  = "nx cloud" -> null
+14:08:52.118 STDOUT [.] terraform:       - resource_object_id     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450" -> null
+14:08:52.118 STDOUT [.] terraform:     }
+14:08:52.118 STDOUT [.] terraform:   # azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-viewer"] will be destroyed
+14:08:52.118 STDOUT [.] terraform:   # (because azuread_app_role_assignment.nxcloud_contoso is not in configuration)
+14:08:52.118 STDOUT [.] terraform:   - resource "azuread_app_role_assignment" "nxcloud_contoso" {
+14:08:52.118 STDOUT [.] terraform:       - app_role_id            = "00000000-0000-0000-0000-000000000000" -> null
+14:08:52.118 STDOUT [.] terraform:       - id                     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/OdWWe9YFc0mABVqHA_DC_TdTBMT-e0xBsInBxuRiV2M" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_display_name = "Viewer ΓÇô Contoso (sim1)" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_object_id    = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.118 STDOUT [.] terraform:       - principal_type         = "User" -> null
+14:08:52.118 STDOUT [.] terraform:       - resource_display_name  = "nx cloud" -> null
+14:08:52.118 STDOUT [.] terraform:       - resource_object_id     = "10e1e6b0-94d0-40ed-ab96-15d0cd5bf450" -> null
+14:08:52.118 STDOUT [.] terraform:     }
+14:08:52.118 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-dev-admin"] will be destroyed
+14:08:52.118 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-admin"] is not in for_each map)
+14:08:52.118 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.118 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.118 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.118 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.118 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.118 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: dev | Role: admin | Managed by Terraform" -> null
+14:08:52.118 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-dev-admin" -> null
+14:08:52.118 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.118 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.118 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.118 STDOUT [.] terraform:       - id                             = "c44b348f-2bd2-4992-bf09-48b7a504c822" -> null
+14:08:52.118 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.118 STDOUT [.] terraform:       - mail_nickname                  = "66bd4cf2-a" -> null
+14:08:52.118 STDOUT [.] terraform:       - members                        = [
+14:08:52.118 STDOUT [.] terraform:           - "aa222cb1-eb3b-4458-89ec-ecba1a59101e",
+14:08:52.118 STDOUT [.] terraform:         ] -> null
+14:08:52.118 STDOUT [.] terraform:       - object_id                      = "c44b348f-2bd2-4992-bf09-48b7a504c822" -> null
+14:08:52.118 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.118 STDOUT [.] terraform:       - owners                         = [
+14:08:52.118 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.118 STDOUT [.] terraform:         ] -> null
+14:08:52.118 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.118 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.118 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.118 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.118 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.118 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.118 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.118 STDOUT [.] terraform:     }
+14:08:52.119 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-dev-user"] will be destroyed
+14:08:52.119 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-user"] is not in for_each map)
+14:08:52.119 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.119 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.119 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.119 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: dev | Role: user | Managed by Terraform" -> null
+14:08:52.119 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-dev-user" -> null
+14:08:52.119 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.119 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.119 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.119 STDOUT [.] terraform:       - id                             = "9f92c56b-2419-4001-b65c-19ca6ffbc422" -> null
+14:08:52.119 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.119 STDOUT [.] terraform:       - mail_nickname                  = "b7ef4543-c" -> null
+14:08:52.119 STDOUT [.] terraform:       - members                        = [
+14:08:52.119 STDOUT [.] terraform:           - "14853fe9-f01d-43f1-8162-fad1054ad7a8",
+14:08:52.119 STDOUT [.] terraform:         ] -> null
+14:08:52.119 STDOUT [.] terraform:       - object_id                      = "9f92c56b-2419-4001-b65c-19ca6ffbc422" -> null
+14:08:52.119 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.119 STDOUT [.] terraform:       - owners                         = [
+14:08:52.119 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.119 STDOUT [.] terraform:         ] -> null
+14:08:52.119 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.119 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.119 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.119 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.119 STDOUT [.] terraform:     }
+14:08:52.119 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-dev-viewer"] will be destroyed
+14:08:52.119 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-viewer"] is not in for_each map)
+14:08:52.119 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.119 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.119 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.119 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.119 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: dev | Role: viewer | Managed by Terraform" -> null
+14:08:52.119 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-dev-viewer" -> null
+14:08:52.119 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.119 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.119 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.119 STDOUT [.] terraform:       - id                             = "5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11" -> null
+14:08:52.119 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.119 STDOUT [.] terraform:       - mail_nickname                  = "7d5a217e-d" -> null
+14:08:52.119 STDOUT [.] terraform:       - members                        = [
+14:08:52.119 STDOUT [.] terraform:           - "7b96d539-05d6-4973-8005-5a8703f0c2fd",
+14:08:52.119 STDOUT [.] terraform:         ] -> null
+14:08:52.119 STDOUT [.] terraform:       - object_id                      = "5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11" -> null
+14:08:52.119 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.119 STDOUT [.] terraform:       - owners                         = [
+14:08:52.120 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.120 STDOUT [.] terraform:         ] -> null
+14:08:52.120 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.120 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.120 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.120 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.120 STDOUT [.] terraform:     }
+14:08:52.120 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-prd-admin"] will be destroyed
+14:08:52.120 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-admin"] is not in for_each map)
+14:08:52.120 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.120 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.120 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.120 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: prd | Role: admin | Managed by Terraform" -> null
+14:08:52.120 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-prd-admin" -> null
+14:08:52.120 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.120 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.120 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.120 STDOUT [.] terraform:       - id                             = "ac391fda-e490-40ac-92ef-d8c908747671" -> null
+14:08:52.120 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.120 STDOUT [.] terraform:       - mail_nickname                  = "b99750bc-c" -> null
+14:08:52.120 STDOUT [.] terraform:       - members                        = [
+14:08:52.120 STDOUT [.] terraform:           - "aa222cb1-eb3b-4458-89ec-ecba1a59101e",
+14:08:52.120 STDOUT [.] terraform:         ] -> null
+14:08:52.120 STDOUT [.] terraform:       - object_id                      = "ac391fda-e490-40ac-92ef-d8c908747671" -> null
+14:08:52.120 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.120 STDOUT [.] terraform:       - owners                         = [
+14:08:52.120 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.120 STDOUT [.] terraform:         ] -> null
+14:08:52.120 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.120 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.120 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.120 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.120 STDOUT [.] terraform:     }
+14:08:52.120 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-prd-user"] will be destroyed
+14:08:52.120 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-user"] is not in for_each map)
+14:08:52.120 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.120 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.120 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.120 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.120 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: prd | Role: user | Managed by Terraform" -> null
+14:08:52.120 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-prd-user" -> null
+14:08:52.120 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.120 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.120 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.120 STDOUT [.] terraform:       - id                             = "6e25067e-f1c9-41d6-ae3a-6b661dbb71ad" -> null
+14:08:52.121 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.121 STDOUT [.] terraform:       - mail_nickname                  = "eacc21d2-7" -> null
+14:08:52.121 STDOUT [.] terraform:       - members                        = [
+14:08:52.121 STDOUT [.] terraform:           - "14853fe9-f01d-43f1-8162-fad1054ad7a8",
+14:08:52.121 STDOUT [.] terraform:         ] -> null
+14:08:52.121 STDOUT [.] terraform:       - object_id                      = "6e25067e-f1c9-41d6-ae3a-6b661dbb71ad" -> null
+14:08:52.121 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.121 STDOUT [.] terraform:       - owners                         = [
+14:08:52.121 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.121 STDOUT [.] terraform:         ] -> null
+14:08:52.121 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.121 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.121 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.121 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.121 STDOUT [.] terraform:     }
+14:08:52.121 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-prd-viewer"] will be destroyed
+14:08:52.121 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-viewer"] is not in for_each map)
+14:08:52.121 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.121 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.121 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.121 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: prd | Role: viewer | Managed by Terraform" -> null
+14:08:52.121 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-prd-viewer" -> null
+14:08:52.121 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.121 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.121 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.121 STDOUT [.] terraform:       - id                             = "15f39352-f836-44d4-a8ff-8a1a84ec43f9" -> null
+14:08:52.121 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.121 STDOUT [.] terraform:       - mail_nickname                  = "6a5b235b-e" -> null
+14:08:52.121 STDOUT [.] terraform:       - members                        = [
+14:08:52.121 STDOUT [.] terraform:           - "7b96d539-05d6-4973-8005-5a8703f0c2fd",
+14:08:52.121 STDOUT [.] terraform:         ] -> null
+14:08:52.121 STDOUT [.] terraform:       - object_id                      = "15f39352-f836-44d4-a8ff-8a1a84ec43f9" -> null
+14:08:52.121 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.121 STDOUT [.] terraform:       - owners                         = [
+14:08:52.121 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.121 STDOUT [.] terraform:         ] -> null
+14:08:52.121 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.121 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.121 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.121 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.121 STDOUT [.] terraform:     }
+14:08:52.121 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa-admin"] will be destroyed
+14:08:52.121 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-admin"] is not in for_each map)
+14:08:52.121 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.121 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.121 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.121 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.121 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa | Role: admin | Managed by Terraform" -> null
+14:08:52.122 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa-admin" -> null
+14:08:52.122 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.122 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.122 STDOUT [.] terraform:       - id                             = "9ed66a80-184e-4e0f-bda6-ef0b82a2911e" -> null
+14:08:52.122 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.122 STDOUT [.] terraform:       - mail_nickname                  = "5318b5f4-7" -> null
+14:08:52.122 STDOUT [.] terraform:       - members                        = [
+14:08:52.122 STDOUT [.] terraform:           - "aa222cb1-eb3b-4458-89ec-ecba1a59101e",
+14:08:52.122 STDOUT [.] terraform:         ] -> null
+14:08:52.122 STDOUT [.] terraform:       - object_id                      = "9ed66a80-184e-4e0f-bda6-ef0b82a2911e" -> null
+14:08:52.122 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - owners                         = [
+14:08:52.122 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.122 STDOUT [.] terraform:         ] -> null
+14:08:52.122 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.122 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.122 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.122 STDOUT [.] terraform:     }
+14:08:52.122 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa-user"] will be destroyed
+14:08:52.122 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-user"] is not in for_each map)
+14:08:52.122 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.122 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.122 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.122 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa | Role: user | Managed by Terraform" -> null
+14:08:52.122 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa-user" -> null
+14:08:52.122 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.122 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.122 STDOUT [.] terraform:       - id                             = "95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa" -> null
+14:08:52.122 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.122 STDOUT [.] terraform:       - mail_nickname                  = "ee04deb3-c" -> null
+14:08:52.122 STDOUT [.] terraform:       - members                        = [
+14:08:52.122 STDOUT [.] terraform:           - "14853fe9-f01d-43f1-8162-fad1054ad7a8",
+14:08:52.122 STDOUT [.] terraform:         ] -> null
+14:08:52.122 STDOUT [.] terraform:       - object_id                      = "95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa" -> null
+14:08:52.122 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - owners                         = [
+14:08:52.122 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.122 STDOUT [.] terraform:         ] -> null
+14:08:52.122 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.122 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.122 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.122 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.123 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.123 STDOUT [.] terraform:     }
+14:08:52.123 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa-viewer"] will be destroyed
+14:08:52.123 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-viewer"] is not in for_each map)
+14:08:52.123 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.123 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.123 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.123 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa | Role: viewer | Managed by Terraform" -> null
+14:08:52.123 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa-viewer" -> null
+14:08:52.123 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.123 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.123 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.123 STDOUT [.] terraform:       - id                             = "e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f" -> null
+14:08:52.123 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.123 STDOUT [.] terraform:       - mail_nickname                  = "edaacb43-4" -> null
+14:08:52.123 STDOUT [.] terraform:       - members                        = [
+14:08:52.123 STDOUT [.] terraform:           - "7b96d539-05d6-4973-8005-5a8703f0c2fd",
+14:08:52.123 STDOUT [.] terraform:         ] -> null
+14:08:52.123 STDOUT [.] terraform:       - object_id                      = "e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f" -> null
+14:08:52.123 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.123 STDOUT [.] terraform:       - owners                         = [
+14:08:52.123 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.123 STDOUT [.] terraform:         ] -> null
+14:08:52.123 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.123 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.123 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.123 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.123 STDOUT [.] terraform:     }
+14:08:52.123 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa2-admin"] will be destroyed
+14:08:52.123 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-admin"] is not in for_each map)
+14:08:52.123 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.123 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.123 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.123 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.123 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa2 | Role: admin | Managed by Terraform" -> null
+14:08:52.123 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa2-admin" -> null
+14:08:52.123 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.123 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.123 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.123 STDOUT [.] terraform:       - id                             = "e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0" -> null
+14:08:52.123 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.123 STDOUT [.] terraform:       - mail_nickname                  = "ad90f4cf-2" -> null
+14:08:52.124 STDOUT [.] terraform:       - members                        = [
+14:08:52.124 STDOUT [.] terraform:           - "aa222cb1-eb3b-4458-89ec-ecba1a59101e",
+14:08:52.124 STDOUT [.] terraform:         ] -> null
+14:08:52.124 STDOUT [.] terraform:       - object_id                      = "e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0" -> null
+14:08:52.124 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.124 STDOUT [.] terraform:       - owners                         = [
+14:08:52.124 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.124 STDOUT [.] terraform:         ] -> null
+14:08:52.124 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.124 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.124 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.124 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.124 STDOUT [.] terraform:     }
+14:08:52.124 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa2-user"] will be destroyed
+14:08:52.124 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-user"] is not in for_each map)
+14:08:52.124 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.124 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.124 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.124 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa2 | Role: user | Managed by Terraform" -> null
+14:08:52.124 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa2-user" -> null
+14:08:52.124 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.124 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.124 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.124 STDOUT [.] terraform:       - id                             = "eb00cd3b-f098-449e-8649-ef7bece61d74" -> null
+14:08:52.124 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.124 STDOUT [.] terraform:       - mail_nickname                  = "21104c56-7" -> null
+14:08:52.124 STDOUT [.] terraform:       - members                        = [
+14:08:52.124 STDOUT [.] terraform:           - "14853fe9-f01d-43f1-8162-fad1054ad7a8",
+14:08:52.124 STDOUT [.] terraform:         ] -> null
+14:08:52.124 STDOUT [.] terraform:       - object_id                      = "eb00cd3b-f098-449e-8649-ef7bece61d74" -> null
+14:08:52.124 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.124 STDOUT [.] terraform:       - owners                         = [
+14:08:52.124 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.124 STDOUT [.] terraform:         ] -> null
+14:08:52.124 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.124 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.124 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.124 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.124 STDOUT [.] terraform:     }
+14:08:52.124 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-qa2-viewer"] will be destroyed
+14:08:52.124 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-viewer"] is not in for_each map)
+14:08:52.124 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.124 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.124 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.124 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.124 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: qa2 | Role: viewer | Managed by Terraform" -> null
+14:08:52.125 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-qa2-viewer" -> null
+14:08:52.125 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.125 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.125 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.125 STDOUT [.] terraform:       - id                             = "b11bbe96-46e3-4783-b322-8c0389a366c0" -> null
+14:08:52.125 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.125 STDOUT [.] terraform:       - mail_nickname                  = "96e51f5c-2" -> null
+14:08:52.125 STDOUT [.] terraform:       - members                        = [
+14:08:52.125 STDOUT [.] terraform:           - "7b96d539-05d6-4973-8005-5a8703f0c2fd",
+14:08:52.125 STDOUT [.] terraform:         ] -> null
+14:08:52.125 STDOUT [.] terraform:       - object_id                      = "b11bbe96-46e3-4783-b322-8c0389a366c0" -> null
+14:08:52.125 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.125 STDOUT [.] terraform:       - owners                         = [
+14:08:52.125 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.125 STDOUT [.] terraform:         ] -> null
+14:08:52.125 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.125 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.125 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.125 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.125 STDOUT [.] terraform:     }
+14:08:52.125 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-tst-admin"] will be destroyed
+14:08:52.125 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-admin"] is not in for_each map)
+14:08:52.125 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.125 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.125 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.125 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.125 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: tst | Role: admin | Managed by Terraform" -> null
+14:08:52.125 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-tst-admin" -> null
+14:08:52.125 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.125 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.125 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.125 STDOUT [.] terraform:       - id                             = "3c6ed00e-43cc-4cc7-a299-fe497b51e8a6" -> null
+14:08:52.125 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.125 STDOUT [.] terraform:       - mail_nickname                  = "b888985a-2" -> null
+14:08:52.125 STDOUT [.] terraform:       - members                        = [
+14:08:52.125 STDOUT [.] terraform:           - "aa222cb1-eb3b-4458-89ec-ecba1a59101e",
+14:08:52.125 STDOUT [.] terraform:         ] -> null
+14:08:52.125 STDOUT [.] terraform:       - object_id                      = "3c6ed00e-43cc-4cc7-a299-fe497b51e8a6" -> null
+14:08:52.125 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.126 STDOUT [.] terraform:       - owners                         = [
+14:08:52.126 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.126 STDOUT [.] terraform:         ] -> null
+14:08:52.126 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.126 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.126 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.126 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.126 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.126 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.126 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.126 STDOUT [.] terraform:     }
+14:08:52.126 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-tst-user"] will be destroyed
+14:08:52.126 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-user"] is not in for_each map)
+14:08:52.126 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.126 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.126 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.126 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.126 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.126 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: tst | Role: user | Managed by Terraform" -> null
+14:08:52.126 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-tst-user" -> null
+14:08:52.126 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.126 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.126 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.126 STDOUT [.] terraform:       - id                             = "df416e17-c1bc-4f20-a68e-6de6e9218b92" -> null
+14:08:52.126 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.126 STDOUT [.] terraform:       - mail_nickname                  = "54a105c6-4" -> null
+14:08:52.126 STDOUT [.] terraform:       - members                        = [
+14:08:52.126 STDOUT [.] terraform:           - "14853fe9-f01d-43f1-8162-fad1054ad7a8",
+14:08:52.126 STDOUT [.] terraform:         ] -> null
+14:08:52.126 STDOUT [.] terraform:       - object_id                      = "df416e17-c1bc-4f20-a68e-6de6e9218b92" -> null
+14:08:52.127 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.127 STDOUT [.] terraform:       - owners                         = [
+14:08:52.127 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.127 STDOUT [.] terraform:         ] -> null
+14:08:52.127 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.127 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.127 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.127 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.127 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.127 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.127 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.127 STDOUT [.] terraform:     }
+14:08:52.127 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-contoso-tst-viewer"] will be destroyed
+14:08:52.127 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-viewer"] is not in for_each map)
+14:08:52.127 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.127 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.127 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.127 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.127 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.127 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: contoso | Env: tst | Role: viewer | Managed by Terraform" -> null
+14:08:52.127 STDOUT [.] terraform:       - display_name                   = "sg-sim1-cs-tst-viewer" -> null
+14:08:52.127 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.127 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.127 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.127 STDOUT [.] terraform:       - id                             = "82e9edfe-2124-4fc6-b403-10d7b9df2c6f" -> null
+14:08:52.127 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.128 STDOUT [.] terraform:       - mail_nickname                  = "ed57ddf2-a" -> null
+14:08:52.128 STDOUT [.] terraform:       - members                        = [
+14:08:52.128 STDOUT [.] terraform:           - "7b96d539-05d6-4973-8005-5a8703f0c2fd",
+14:08:52.128 STDOUT [.] terraform:         ] -> null
+14:08:52.128 STDOUT [.] terraform:       - object_id                      = "82e9edfe-2124-4fc6-b403-10d7b9df2c6f" -> null
+14:08:52.128 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - owners                         = [
+14:08:52.128 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.128 STDOUT [.] terraform:         ] -> null
+14:08:52.128 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.128 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.128 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.128 STDOUT [.] terraform:     }
+14:08:52.128 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-dev-admin"] will be destroyed
+14:08:52.128 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-admin"] is not in for_each map)
+14:08:52.128 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.128 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.128 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.128 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: dev | Role: admin | Managed by Terraform" -> null
+14:08:52.128 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-dev-admin" -> null
+14:08:52.128 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.128 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.128 STDOUT [.] terraform:       - id                             = "a45e8721-82a0-4dde-8601-2874802d85e5" -> null
+14:08:52.128 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.128 STDOUT [.] terraform:       - mail_nickname                  = "ec7ff8e0-e" -> null
+14:08:52.128 STDOUT [.] terraform:       - members                        = [
+14:08:52.128 STDOUT [.] terraform:           - "924f1703-ba0b-4d5d-b36e-e9920de2e0cc",
+14:08:52.128 STDOUT [.] terraform:         ] -> null
+14:08:52.128 STDOUT [.] terraform:       - object_id                      = "a45e8721-82a0-4dde-8601-2874802d85e5" -> null
+14:08:52.128 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - owners                         = [
+14:08:52.128 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.128 STDOUT [.] terraform:         ] -> null
+14:08:52.128 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.128 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.128 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.128 STDOUT [.] terraform:     }
+14:08:52.128 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-dev-user"] will be destroyed
+14:08:52.128 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-user"] is not in for_each map)
+14:08:52.128 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.128 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.128 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.128 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.128 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: dev | Role: user | Managed by Terraform" -> null
+14:08:52.128 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-dev-user" -> null
+14:08:52.128 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.128 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.128 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.129 STDOUT [.] terraform:       - id                             = "c201ca87-9214-4f36-b9a3-88b32ad3e7bf" -> null
+14:08:52.129 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.129 STDOUT [.] terraform:       - mail_nickname                  = "a6a21b1b-f" -> null
+14:08:52.129 STDOUT [.] terraform:       - members                        = [
+14:08:52.129 STDOUT [.] terraform:           - "b1748142-e0c5-4057-83d7-4fbe24e6f890",
+14:08:52.129 STDOUT [.] terraform:         ] -> null
+14:08:52.129 STDOUT [.] terraform:       - object_id                      = "c201ca87-9214-4f36-b9a3-88b32ad3e7bf" -> null
+14:08:52.129 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.129 STDOUT [.] terraform:       - owners                         = [
+14:08:52.129 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.129 STDOUT [.] terraform:         ] -> null
+14:08:52.129 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.129 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.129 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.129 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.129 STDOUT [.] terraform:     }
+14:08:52.129 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-dev-viewer"] will be destroyed
+14:08:52.129 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-viewer"] is not in for_each map)
+14:08:52.129 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.129 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.129 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.129 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: dev | Role: viewer | Managed by Terraform" -> null
+14:08:52.129 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-dev-viewer" -> null
+14:08:52.129 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.129 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.129 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.129 STDOUT [.] terraform:       - id                             = "d8b7de74-791a-4535-b8d0-684106325113" -> null
+14:08:52.129 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.129 STDOUT [.] terraform:       - mail_nickname                  = "4d757d1a-8" -> null
+14:08:52.129 STDOUT [.] terraform:       - members                        = [
+14:08:52.129 STDOUT [.] terraform:           - "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c",
+14:08:52.129 STDOUT [.] terraform:         ] -> null
+14:08:52.129 STDOUT [.] terraform:       - object_id                      = "d8b7de74-791a-4535-b8d0-684106325113" -> null
+14:08:52.129 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.129 STDOUT [.] terraform:       - owners                         = [
+14:08:52.129 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.129 STDOUT [.] terraform:         ] -> null
+14:08:52.129 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.129 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.129 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.129 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.129 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.129 STDOUT [.] terraform:     }
+14:08:52.129 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-prd-admin"] will be destroyed
+14:08:52.129 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-admin"] is not in for_each map)
+14:08:52.129 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.129 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.130 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.130 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.130 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.130 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: prd | Role: admin | Managed by Terraform" -> null
+14:08:52.130 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-prd-admin" -> null
+14:08:52.130 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.130 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.130 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.130 STDOUT [.] terraform:       - id                             = "bcfe0d85-1bb6-4bed-95d8-86837600ba80" -> null
+14:08:52.130 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.130 STDOUT [.] terraform:       - mail_nickname                  = "fe7eb7a3-4" -> null
+14:08:52.130 STDOUT [.] terraform:       - members                        = [
+14:08:52.130 STDOUT [.] terraform:           - "924f1703-ba0b-4d5d-b36e-e9920de2e0cc",
+14:08:52.130 STDOUT [.] terraform:         ] -> null
+14:08:52.130 STDOUT [.] terraform:       - object_id                      = "bcfe0d85-1bb6-4bed-95d8-86837600ba80" -> null
+14:08:52.130 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.130 STDOUT [.] terraform:       - owners                         = [
+14:08:52.130 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.130 STDOUT [.] terraform:         ] -> null
+14:08:52.130 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.130 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.130 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.130 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.130 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.130 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.130 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.130 STDOUT [.] terraform:     }
+14:08:52.130 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-prd-user"] will be destroyed
+14:08:52.131 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-user"] is not in for_each map)
+14:08:52.131 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.131 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.131 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.131 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: prd | Role: user | Managed by Terraform" -> null
+14:08:52.131 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-prd-user" -> null
+14:08:52.131 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.131 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.131 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.131 STDOUT [.] terraform:       - id                             = "c9f09834-4b2c-4471-ba55-514c7801d5b3" -> null
+14:08:52.131 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.131 STDOUT [.] terraform:       - mail_nickname                  = "ab228cab-b" -> null
+14:08:52.131 STDOUT [.] terraform:       - members                        = [
+14:08:52.131 STDOUT [.] terraform:           - "b1748142-e0c5-4057-83d7-4fbe24e6f890",
+14:08:52.131 STDOUT [.] terraform:         ] -> null
+14:08:52.131 STDOUT [.] terraform:       - object_id                      = "c9f09834-4b2c-4471-ba55-514c7801d5b3" -> null
+14:08:52.131 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.131 STDOUT [.] terraform:       - owners                         = [
+14:08:52.131 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.131 STDOUT [.] terraform:         ] -> null
+14:08:52.131 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.131 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.131 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.131 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.131 STDOUT [.] terraform:     }
+14:08:52.131 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-prd-viewer"] will be destroyed
+14:08:52.131 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-viewer"] is not in for_each map)
+14:08:52.131 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.131 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.131 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.131 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.131 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: prd | Role: viewer | Managed by Terraform" -> null
+14:08:52.131 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-prd-viewer" -> null
+14:08:52.131 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.131 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.131 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.131 STDOUT [.] terraform:       - id                             = "10d28d85-4ff9-4cee-9be5-63bb04df07cc" -> null
+14:08:52.131 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.131 STDOUT [.] terraform:       - mail_nickname                  = "76fba41d-0" -> null
+14:08:52.131 STDOUT [.] terraform:       - members                        = [
+14:08:52.131 STDOUT [.] terraform:           - "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c",
+14:08:52.131 STDOUT [.] terraform:         ] -> null
+14:08:52.131 STDOUT [.] terraform:       - object_id                      = "10d28d85-4ff9-4cee-9be5-63bb04df07cc" -> null
+14:08:52.131 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.131 STDOUT [.] terraform:       - owners                         = [
+14:08:52.132 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.132 STDOUT [.] terraform:         ] -> null
+14:08:52.132 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.132 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.132 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.132 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.132 STDOUT [.] terraform:     }
+14:08:52.132 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa-admin"] will be destroyed
+14:08:52.132 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-admin"] is not in for_each map)
+14:08:52.132 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.132 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.132 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.132 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa | Role: admin | Managed by Terraform" -> null
+14:08:52.132 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa-admin" -> null
+14:08:52.132 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.132 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.132 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.132 STDOUT [.] terraform:       - id                             = "54c1f487-ab2e-4d1d-ab22-1597d7c4a150" -> null
+14:08:52.132 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.132 STDOUT [.] terraform:       - mail_nickname                  = "37b24089-0" -> null
+14:08:52.132 STDOUT [.] terraform:       - members                        = [
+14:08:52.132 STDOUT [.] terraform:           - "924f1703-ba0b-4d5d-b36e-e9920de2e0cc",
+14:08:52.132 STDOUT [.] terraform:         ] -> null
+14:08:52.132 STDOUT [.] terraform:       - object_id                      = "54c1f487-ab2e-4d1d-ab22-1597d7c4a150" -> null
+14:08:52.132 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.132 STDOUT [.] terraform:       - owners                         = [
+14:08:52.132 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.132 STDOUT [.] terraform:         ] -> null
+14:08:52.132 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.132 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.132 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.132 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.132 STDOUT [.] terraform:     }
+14:08:52.132 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa-user"] will be destroyed
+14:08:52.132 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-user"] is not in for_each map)
+14:08:52.132 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.132 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.132 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.132 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.132 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa | Role: user | Managed by Terraform" -> null
+14:08:52.132 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa-user" -> null
+14:08:52.132 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.132 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.132 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.132 STDOUT [.] terraform:       - id                             = "46fa650f-1ce3-4c48-b805-25c330e8b085" -> null
+14:08:52.132 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.133 STDOUT [.] terraform:       - mail_nickname                  = "2571a1a0-5" -> null
+14:08:52.133 STDOUT [.] terraform:       - members                        = [
+14:08:52.133 STDOUT [.] terraform:           - "b1748142-e0c5-4057-83d7-4fbe24e6f890",
+14:08:52.133 STDOUT [.] terraform:         ] -> null
+14:08:52.133 STDOUT [.] terraform:       - object_id                      = "46fa650f-1ce3-4c48-b805-25c330e8b085" -> null
+14:08:52.133 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.133 STDOUT [.] terraform:       - owners                         = [
+14:08:52.133 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.133 STDOUT [.] terraform:         ] -> null
+14:08:52.133 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.133 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.133 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.133 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.133 STDOUT [.] terraform:     }
+14:08:52.133 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa-viewer"] will be destroyed
+14:08:52.133 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-viewer"] is not in for_each map)
+14:08:52.133 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.133 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.133 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.133 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa | Role: viewer | Managed by Terraform" -> null
+14:08:52.133 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa-viewer" -> null
+14:08:52.133 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.133 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.133 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.133 STDOUT [.] terraform:       - id                             = "4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac" -> null
+14:08:52.133 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.133 STDOUT [.] terraform:       - mail_nickname                  = "46ef0c02-b" -> null
+14:08:52.133 STDOUT [.] terraform:       - members                        = [
+14:08:52.133 STDOUT [.] terraform:           - "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c",
+14:08:52.133 STDOUT [.] terraform:         ] -> null
+14:08:52.133 STDOUT [.] terraform:       - object_id                      = "4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac" -> null
+14:08:52.133 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.133 STDOUT [.] terraform:       - owners                         = [
+14:08:52.133 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.133 STDOUT [.] terraform:         ] -> null
+14:08:52.133 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.133 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.133 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.133 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.133 STDOUT [.] terraform:     }
+14:08:52.133 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa2-admin"] will be destroyed
+14:08:52.133 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-admin"] is not in for_each map)
+14:08:52.133 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.133 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.133 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.133 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.134 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa2 | Role: admin | Managed by Terraform" -> null
+14:08:52.134 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa2-admin" -> null
+14:08:52.134 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.134 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.134 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.134 STDOUT [.] terraform:       - id                             = "a6ac68c1-3fc5-4517-bc48-ef3ae6d12128" -> null
+14:08:52.134 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.134 STDOUT [.] terraform:       - mail_nickname                  = "2b320710-2" -> null
+14:08:52.134 STDOUT [.] terraform:       - members                        = [
+14:08:52.134 STDOUT [.] terraform:           - "924f1703-ba0b-4d5d-b36e-e9920de2e0cc",
+14:08:52.134 STDOUT [.] terraform:         ] -> null
+14:08:52.134 STDOUT [.] terraform:       - object_id                      = "a6ac68c1-3fc5-4517-bc48-ef3ae6d12128" -> null
+14:08:52.134 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.134 STDOUT [.] terraform:       - owners                         = [
+14:08:52.134 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.134 STDOUT [.] terraform:         ] -> null
+14:08:52.134 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.134 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.134 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.134 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.134 STDOUT [.] terraform:     }
+14:08:52.134 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa2-user"] will be destroyed
+14:08:52.134 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-user"] is not in for_each map)
+14:08:52.134 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.134 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.134 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.134 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.134 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa2 | Role: user | Managed by Terraform" -> null
+14:08:52.134 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa2-user" -> null
+14:08:52.134 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.134 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.134 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.134 STDOUT [.] terraform:       - id                             = "3de6935e-640e-47c7-96eb-62b3c197475f" -> null
+14:08:52.135 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.135 STDOUT [.] terraform:       - mail_nickname                  = "04ce1753-6" -> null
+14:08:52.135 STDOUT [.] terraform:       - members                        = [
+14:08:52.135 STDOUT [.] terraform:           - "b1748142-e0c5-4057-83d7-4fbe24e6f890",
+14:08:52.135 STDOUT [.] terraform:         ] -> null
+14:08:52.135 STDOUT [.] terraform:       - object_id                      = "3de6935e-640e-47c7-96eb-62b3c197475f" -> null
+14:08:52.135 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.135 STDOUT [.] terraform:       - owners                         = [
+14:08:52.135 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.135 STDOUT [.] terraform:         ] -> null
+14:08:52.135 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.135 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.135 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.135 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.135 STDOUT [.] terraform:     }
+14:08:52.135 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-qa2-viewer"] will be destroyed
+14:08:52.135 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-viewer"] is not in for_each map)
+14:08:52.135 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.135 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.135 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.135 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: qa2 | Role: viewer | Managed by Terraform" -> null
+14:08:52.135 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-qa2-viewer" -> null
+14:08:52.135 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.135 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.135 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.135 STDOUT [.] terraform:       - id                             = "4600ced9-3265-4157-9c79-6a9b7ec28e35" -> null
+14:08:52.135 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.135 STDOUT [.] terraform:       - mail_nickname                  = "07bbe451-4" -> null
+14:08:52.135 STDOUT [.] terraform:       - members                        = [
+14:08:52.135 STDOUT [.] terraform:           - "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c",
+14:08:52.135 STDOUT [.] terraform:         ] -> null
+14:08:52.135 STDOUT [.] terraform:       - object_id                      = "4600ced9-3265-4157-9c79-6a9b7ec28e35" -> null
+14:08:52.135 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.135 STDOUT [.] terraform:       - owners                         = [
+14:08:52.135 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.135 STDOUT [.] terraform:         ] -> null
+14:08:52.135 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.135 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.135 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.135 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.136 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.136 STDOUT [.] terraform:     }
+14:08:52.136 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-tst-admin"] will be destroyed
+14:08:52.136 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-admin"] is not in for_each map)
+14:08:52.136 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.136 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.136 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.136 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: tst | Role: admin | Managed by Terraform" -> null
+14:08:52.136 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-tst-admin" -> null
+14:08:52.136 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.136 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.136 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.136 STDOUT [.] terraform:       - id                             = "5eb3e670-9560-4b10-88b8-e9f2a7076237" -> null
+14:08:52.136 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.136 STDOUT [.] terraform:       - mail_nickname                  = "1f6f613e-e" -> null
+14:08:52.136 STDOUT [.] terraform:       - members                        = [
+14:08:52.136 STDOUT [.] terraform:           - "924f1703-ba0b-4d5d-b36e-e9920de2e0cc",
+14:08:52.136 STDOUT [.] terraform:         ] -> null
+14:08:52.136 STDOUT [.] terraform:       - object_id                      = "5eb3e670-9560-4b10-88b8-e9f2a7076237" -> null
+14:08:52.136 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.136 STDOUT [.] terraform:       - owners                         = [
+14:08:52.136 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.136 STDOUT [.] terraform:         ] -> null
+14:08:52.136 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.136 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.136 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.136 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.136 STDOUT [.] terraform:     }
+14:08:52.136 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-tst-user"] will be destroyed
+14:08:52.136 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-user"] is not in for_each map)
+14:08:52.136 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.136 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.136 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.136 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.136 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: tst | Role: user | Managed by Terraform" -> null
+14:08:52.136 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-tst-user" -> null
+14:08:52.136 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.137 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.137 STDOUT [.] terraform:       - id                             = "ee37a891-595b-4082-a432-c36d99bde618" -> null
+14:08:52.137 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.137 STDOUT [.] terraform:       - mail_nickname                  = "44d376d8-e" -> null
+14:08:52.137 STDOUT [.] terraform:       - members                        = [
+14:08:52.137 STDOUT [.] terraform:           - "b1748142-e0c5-4057-83d7-4fbe24e6f890",
+14:08:52.137 STDOUT [.] terraform:         ] -> null
+14:08:52.137 STDOUT [.] terraform:       - object_id                      = "ee37a891-595b-4082-a432-c36d99bde618" -> null
+14:08:52.137 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - owners                         = [
+14:08:52.137 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.137 STDOUT [.] terraform:         ] -> null
+14:08:52.137 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.137 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.137 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.137 STDOUT [.] terraform:     }
+14:08:52.137 STDOUT [.] terraform:   # azuread_group.org_env_role["sim1-fabrikam-tst-viewer"] will be destroyed
+14:08:52.137 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-viewer"] is not in for_each map)
+14:08:52.137 STDOUT [.] terraform:   - resource "azuread_group" "org_env_role" {
+14:08:52.137 STDOUT [.] terraform:       - administrative_unit_ids        = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - assignable_to_role             = false -> null
+14:08:52.137 STDOUT [.] terraform:       - auto_subscribe_new_members     = false -> null
+14:08:52.137 STDOUT [.] terraform:       - behaviors                      = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - description                    = "Tenant: sim1 | Org: fabrikam | Env: tst | Role: viewer | Managed by Terraform" -> null
+14:08:52.137 STDOUT [.] terraform:       - display_name                   = "sg-sim1-fk-tst-viewer" -> null
+14:08:52.137 STDOUT [.] terraform:       - external_senders_allowed       = false -> null
+14:08:52.137 STDOUT [.] terraform:       - hide_from_address_lists        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - hide_from_outlook_clients      = false -> null
+14:08:52.137 STDOUT [.] terraform:       - id                             = "fcda5c7d-57d1-46fb-9292-a924660faaad" -> null
+14:08:52.137 STDOUT [.] terraform:       - mail_enabled                   = false -> null
+14:08:52.137 STDOUT [.] terraform:       - mail_nickname                  = "e2f596bd-1" -> null
+14:08:52.137 STDOUT [.] terraform:       - members                        = [
+14:08:52.137 STDOUT [.] terraform:           - "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c",
+14:08:52.137 STDOUT [.] terraform:         ] -> null
+14:08:52.137 STDOUT [.] terraform:       - object_id                      = "fcda5c7d-57d1-46fb-9292-a924660faaad" -> null
+14:08:52.137 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - owners                         = [
+14:08:52.137 STDOUT [.] terraform:           - "ce4a9c30-a8ee-4730-a2a2-624992c19f68",
+14:08:52.137 STDOUT [.] terraform:         ] -> null
+14:08:52.137 STDOUT [.] terraform:       - prevent_duplicate_names        = false -> null
+14:08:52.137 STDOUT [.] terraform:       - provisioning_options           = [] -> null
+14:08:52.137 STDOUT [.] terraform:       - proxy_addresses                = [] -> null
+14:08:52.138 STDOUT [.] terraform:       - security_enabled               = true -> null
+14:08:52.138 STDOUT [.] terraform:       - types                          = [] -> null
+14:08:52.138 STDOUT [.] terraform:       - writeback_enabled              = false -> null
+14:08:52.138 STDOUT [.] terraform:         # (9 unchanged attributes hidden)
+14:08:52.138 STDOUT [.] terraform:     }
+14:08:52.138 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-dev-admin"] will be destroyed
+14:08:52.138 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-admin"] is not in for_each map)
+14:08:52.138 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.138 STDOUT [.] terraform:       - group_object_id  = "c44b348f-2bd2-4992-bf09-48b7a504c822" -> null
+14:08:52.138 STDOUT [.] terraform:       - id               = "c44b348f-2bd2-4992-bf09-48b7a504c822/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.138 STDOUT [.] terraform:       - member_object_id = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.138 STDOUT [.] terraform:     }
+14:08:52.138 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-dev-user"] will be destroyed
+14:08:52.138 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-user"] is not in for_each map)
+14:08:52.138 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.138 STDOUT [.] terraform:       - group_object_id  = "9f92c56b-2419-4001-b65c-19ca6ffbc422" -> null
+14:08:52.138 STDOUT [.] terraform:       - id               = "9f92c56b-2419-4001-b65c-19ca6ffbc422/member/14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.138 STDOUT [.] terraform:       - member_object_id = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.138 STDOUT [.] terraform:     }
+14:08:52.138 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-dev-viewer"] will be destroyed
+14:08:52.138 STDOUT [.] terraform:   # (because key ["sim1-contoso-dev-viewer"] is not in for_each map)
+14:08:52.138 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.138 STDOUT [.] terraform:       - group_object_id  = "5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11" -> null
+14:08:52.138 STDOUT [.] terraform:       - id               = "5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11/member/7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.138 STDOUT [.] terraform:       - member_object_id = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.138 STDOUT [.] terraform:     }
+14:08:52.138 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-prd-admin"] will be destroyed
+14:08:52.138 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-admin"] is not in for_each map)
+14:08:52.138 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.138 STDOUT [.] terraform:       - group_object_id  = "ac391fda-e490-40ac-92ef-d8c908747671" -> null
+14:08:52.138 STDOUT [.] terraform:       - id               = "ac391fda-e490-40ac-92ef-d8c908747671/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.138 STDOUT [.] terraform:       - member_object_id = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-prd-user"] will be destroyed
+14:08:52.139 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-user"] is not in for_each map)
+14:08:52.139 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.139 STDOUT [.] terraform:       - group_object_id  = "6e25067e-f1c9-41d6-ae3a-6b661dbb71ad" -> null
+14:08:52.139 STDOUT [.] terraform:       - id               = "6e25067e-f1c9-41d6-ae3a-6b661dbb71ad/member/14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.139 STDOUT [.] terraform:       - member_object_id = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-prd-viewer"] will be destroyed
+14:08:52.139 STDOUT [.] terraform:   # (because key ["sim1-contoso-prd-viewer"] is not in for_each map)
+14:08:52.139 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.139 STDOUT [.] terraform:       - group_object_id  = "15f39352-f836-44d4-a8ff-8a1a84ec43f9" -> null
+14:08:52.139 STDOUT [.] terraform:       - id               = "15f39352-f836-44d4-a8ff-8a1a84ec43f9/member/7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.139 STDOUT [.] terraform:       - member_object_id = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa-admin"] will be destroyed
+14:08:52.139 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-admin"] is not in for_each map)
+14:08:52.139 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.139 STDOUT [.] terraform:       - group_object_id  = "9ed66a80-184e-4e0f-bda6-ef0b82a2911e" -> null
+14:08:52.139 STDOUT [.] terraform:       - id               = "9ed66a80-184e-4e0f-bda6-ef0b82a2911e/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.139 STDOUT [.] terraform:       - member_object_id = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa-user"] will be destroyed
+14:08:52.139 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-user"] is not in for_each map)
+14:08:52.139 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.139 STDOUT [.] terraform:       - group_object_id  = "95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa" -> null
+14:08:52.139 STDOUT [.] terraform:       - id               = "95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa/member/14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.139 STDOUT [.] terraform:       - member_object_id = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa-viewer"] will be destroyed
+14:08:52.139 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa-viewer"] is not in for_each map)
+14:08:52.139 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.139 STDOUT [.] terraform:       - group_object_id  = "e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f" -> null
+14:08:52.139 STDOUT [.] terraform:       - id               = "e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f/member/7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.139 STDOUT [.] terraform:       - member_object_id = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.139 STDOUT [.] terraform:     }
+14:08:52.139 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa2-admin"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-admin"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0" -> null
+14:08:52.140 STDOUT [.] terraform:       - id               = "e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.140 STDOUT [.] terraform:       - member_object_id = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.140 STDOUT [.] terraform:     }
+14:08:52.140 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa2-user"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-user"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "eb00cd3b-f098-449e-8649-ef7bece61d74" -> null
+14:08:52.140 STDOUT [.] terraform:       - id               = "eb00cd3b-f098-449e-8649-ef7bece61d74/member/14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.140 STDOUT [.] terraform:       - member_object_id = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.140 STDOUT [.] terraform:     }
+14:08:52.140 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-qa2-viewer"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-qa2-viewer"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "b11bbe96-46e3-4783-b322-8c0389a366c0" -> null
+14:08:52.140 STDOUT [.] terraform:       - id               = "b11bbe96-46e3-4783-b322-8c0389a366c0/member/7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.140 STDOUT [.] terraform:       - member_object_id = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.140 STDOUT [.] terraform:     }
+14:08:52.140 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-tst-admin"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-admin"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "3c6ed00e-43cc-4cc7-a299-fe497b51e8a6" -> null
+14:08:52.140 STDOUT [.] terraform:       - id               = "3c6ed00e-43cc-4cc7-a299-fe497b51e8a6/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.140 STDOUT [.] terraform:       - member_object_id = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.140 STDOUT [.] terraform:     }
+14:08:52.140 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-tst-user"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-user"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "df416e17-c1bc-4f20-a68e-6de6e9218b92" -> null
+14:08:52.140 STDOUT [.] terraform:       - id               = "df416e17-c1bc-4f20-a68e-6de6e9218b92/member/14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.140 STDOUT [.] terraform:       - member_object_id = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.140 STDOUT [.] terraform:     }
+14:08:52.140 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-contoso-tst-viewer"] will be destroyed
+14:08:52.140 STDOUT [.] terraform:   # (because key ["sim1-contoso-tst-viewer"] is not in for_each map)
+14:08:52.140 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.140 STDOUT [.] terraform:       - group_object_id  = "82e9edfe-2124-4fc6-b403-10d7b9df2c6f" -> null
+14:08:52.141 STDOUT [.] terraform:       - id               = "82e9edfe-2124-4fc6-b403-10d7b9df2c6f/member/7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.141 STDOUT [.] terraform:       - member_object_id = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.141 STDOUT [.] terraform:     }
+14:08:52.141 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-dev-admin"] will be destroyed
+14:08:52.141 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-admin"] is not in for_each map)
+14:08:52.141 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.141 STDOUT [.] terraform:       - group_object_id  = "a45e8721-82a0-4dde-8601-2874802d85e5" -> null
+14:08:52.141 STDOUT [.] terraform:       - id               = "a45e8721-82a0-4dde-8601-2874802d85e5/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.141 STDOUT [.] terraform:       - member_object_id = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.141 STDOUT [.] terraform:     }
+14:08:52.141 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-dev-user"] will be destroyed
+14:08:52.141 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-user"] is not in for_each map)
+14:08:52.141 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.141 STDOUT [.] terraform:       - group_object_id  = "c201ca87-9214-4f36-b9a3-88b32ad3e7bf" -> null
+14:08:52.141 STDOUT [.] terraform:       - id               = "c201ca87-9214-4f36-b9a3-88b32ad3e7bf/member/b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.141 STDOUT [.] terraform:       - member_object_id = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.141 STDOUT [.] terraform:     }
+14:08:52.141 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-dev-viewer"] will be destroyed
+14:08:52.141 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-dev-viewer"] is not in for_each map)
+14:08:52.141 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "d8b7de74-791a-4535-b8d0-684106325113" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "d8b7de74-791a-4535-b8d0-684106325113/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.142 STDOUT [.] terraform:     }
+14:08:52.142 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-prd-admin"] will be destroyed
+14:08:52.142 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-admin"] is not in for_each map)
+14:08:52.142 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "bcfe0d85-1bb6-4bed-95d8-86837600ba80" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "bcfe0d85-1bb6-4bed-95d8-86837600ba80/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.142 STDOUT [.] terraform:     }
+14:08:52.142 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-prd-user"] will be destroyed
+14:08:52.142 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-user"] is not in for_each map)
+14:08:52.142 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "c9f09834-4b2c-4471-ba55-514c7801d5b3" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "c9f09834-4b2c-4471-ba55-514c7801d5b3/member/b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.142 STDOUT [.] terraform:     }
+14:08:52.142 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-prd-viewer"] will be destroyed
+14:08:52.142 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-prd-viewer"] is not in for_each map)
+14:08:52.142 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "10d28d85-4ff9-4cee-9be5-63bb04df07cc" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "10d28d85-4ff9-4cee-9be5-63bb04df07cc/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.142 STDOUT [.] terraform:     }
+14:08:52.142 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa-admin"] will be destroyed
+14:08:52.142 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-admin"] is not in for_each map)
+14:08:52.142 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "54c1f487-ab2e-4d1d-ab22-1597d7c4a150" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "54c1f487-ab2e-4d1d-ab22-1597d7c4a150/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.142 STDOUT [.] terraform:     }
+14:08:52.142 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa-user"] will be destroyed
+14:08:52.142 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-user"] is not in for_each map)
+14:08:52.142 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.142 STDOUT [.] terraform:       - group_object_id  = "46fa650f-1ce3-4c48-b805-25c330e8b085" -> null
+14:08:52.142 STDOUT [.] terraform:       - id               = "46fa650f-1ce3-4c48-b805-25c330e8b085/member/b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.142 STDOUT [.] terraform:       - member_object_id = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa-viewer"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa-viewer"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.143 STDOUT [.] terraform:       - group_object_id  = "4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac" -> null
+14:08:52.143 STDOUT [.] terraform:       - id               = "4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.143 STDOUT [.] terraform:       - member_object_id = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa2-admin"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-admin"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.143 STDOUT [.] terraform:       - group_object_id  = "a6ac68c1-3fc5-4517-bc48-ef3ae6d12128" -> null
+14:08:52.143 STDOUT [.] terraform:       - id               = "a6ac68c1-3fc5-4517-bc48-ef3ae6d12128/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.143 STDOUT [.] terraform:       - member_object_id = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa2-user"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-user"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.143 STDOUT [.] terraform:       - group_object_id  = "3de6935e-640e-47c7-96eb-62b3c197475f" -> null
+14:08:52.143 STDOUT [.] terraform:       - id               = "3de6935e-640e-47c7-96eb-62b3c197475f/member/b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.143 STDOUT [.] terraform:       - member_object_id = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-qa2-viewer"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-qa2-viewer"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.143 STDOUT [.] terraform:       - group_object_id  = "4600ced9-3265-4157-9c79-6a9b7ec28e35" -> null
+14:08:52.143 STDOUT [.] terraform:       - id               = "4600ced9-3265-4157-9c79-6a9b7ec28e35/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.143 STDOUT [.] terraform:       - member_object_id = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-tst-admin"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-admin"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.143 STDOUT [.] terraform:       - group_object_id  = "5eb3e670-9560-4b10-88b8-e9f2a7076237" -> null
+14:08:52.143 STDOUT [.] terraform:       - id               = "5eb3e670-9560-4b10-88b8-e9f2a7076237/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.143 STDOUT [.] terraform:       - member_object_id = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.143 STDOUT [.] terraform:     }
+14:08:52.143 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-tst-user"] will be destroyed
+14:08:52.143 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-user"] is not in for_each map)
+14:08:52.143 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.144 STDOUT [.] terraform:       - group_object_id  = "ee37a891-595b-4082-a432-c36d99bde618" -> null
+14:08:52.144 STDOUT [.] terraform:       - id               = "ee37a891-595b-4082-a432-c36d99bde618/member/b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.144 STDOUT [.] terraform:       - member_object_id = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.144 STDOUT [.] terraform:     }
+14:08:52.144 STDOUT [.] terraform:   # azuread_group_member.user_env_role["sim1-fabrikam-tst-viewer"] will be destroyed
+14:08:52.144 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-tst-viewer"] is not in for_each map)
+14:08:52.144 STDOUT [.] terraform:   - resource "azuread_group_member" "user_env_role" {
+14:08:52.144 STDOUT [.] terraform:       - group_object_id  = "fcda5c7d-57d1-46fb-9292-a924660faaad" -> null
+14:08:52.144 STDOUT [.] terraform:       - id               = "fcda5c7d-57d1-46fb-9292-a924660faaad/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.144 STDOUT [.] terraform:       - member_object_id = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.144 STDOUT [.] terraform:     }
+14:08:52.144 STDOUT [.] terraform:   # azuread_user.org_role["sim1-contoso-admin"] will be destroyed
+14:08:52.144 STDOUT [.] terraform:   # (because key ["sim1-contoso-admin"] is not in for_each map)
+14:08:52.144 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.144 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.144 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.144 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.144 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.144 STDOUT [.] terraform:       - display_name                   = "Admin ΓÇô Contoso (sim1)" -> null
+14:08:52.144 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.144 STDOUT [.] terraform:       - id                             = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.144 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.144 STDOUT [.] terraform:       - mail                           = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.144 STDOUT [.] terraform:       - mail_nickname                  = "sim1-cs-admin" -> null
+14:08:52.144 STDOUT [.] terraform:       - object_id                      = "aa222cb1-eb3b-4458-89ec-ecba1a59101e" -> null
+14:08:52.144 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.144 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.144 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.144 STDOUT [.] terraform:           - "SMTP:sim1-cs-admin@sreazrwussim1.onmicrosoft.com",
+14:08:52.144 STDOUT [.] terraform:         ] -> null
+14:08:52.144 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.144 STDOUT [.] terraform:       - user_principal_name            = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.144 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.144 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.144 STDOUT [.] terraform:     }
+14:08:52.144 STDOUT [.] terraform:   # azuread_user.org_role["sim1-contoso-user"] will be destroyed
+14:08:52.144 STDOUT [.] terraform:   # (because key ["sim1-contoso-user"] is not in for_each map)
+14:08:52.144 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.144 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.144 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.144 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.144 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.144 STDOUT [.] terraform:       - display_name                   = "User ΓÇô Contoso (sim1)" -> null
+14:08:52.144 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.144 STDOUT [.] terraform:       - id                             = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.144 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - mail                           = "sim1-cs-user@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.145 STDOUT [.] terraform:       - mail_nickname                  = "sim1-cs-user" -> null
+14:08:52.145 STDOUT [.] terraform:       - object_id                      = "14853fe9-f01d-43f1-8162-fad1054ad7a8" -> null
+14:08:52.145 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.145 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.145 STDOUT [.] terraform:           - "SMTP:sim1-cs-user@sreazrwussim1.onmicrosoft.com",
+14:08:52.145 STDOUT [.] terraform:         ] -> null
+14:08:52.145 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.145 STDOUT [.] terraform:       - user_principal_name            = "sim1-cs-user@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.145 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.145 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.145 STDOUT [.] terraform:     }
+14:08:52.145 STDOUT [.] terraform:   # azuread_user.org_role["sim1-contoso-viewer"] will be destroyed
+14:08:52.145 STDOUT [.] terraform:   # (because key ["sim1-contoso-viewer"] is not in for_each map)
+14:08:52.145 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.145 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.145 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.145 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.145 STDOUT [.] terraform:       - display_name                   = "Viewer ΓÇô Contoso (sim1)" -> null
+14:08:52.145 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.145 STDOUT [.] terraform:       - id                             = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.145 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - mail                           = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.145 STDOUT [.] terraform:       - mail_nickname                  = "sim1-cs-viewer" -> null
+14:08:52.145 STDOUT [.] terraform:       - object_id                      = "7b96d539-05d6-4973-8005-5a8703f0c2fd" -> null
+14:08:52.145 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.145 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.145 STDOUT [.] terraform:           - "SMTP:sim1-cs-viewer@sreazrwussim1.onmicrosoft.com",
+14:08:52.145 STDOUT [.] terraform:         ] -> null
+14:08:52.145 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.145 STDOUT [.] terraform:       - user_principal_name            = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.145 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.145 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.145 STDOUT [.] terraform:     }
+14:08:52.145 STDOUT [.] terraform:   # azuread_user.org_role["sim1-fabrikam-admin"] will be destroyed
+14:08:52.145 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-admin"] is not in for_each map)
+14:08:52.145 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.145 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.145 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.145 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.145 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.145 STDOUT [.] terraform:       - display_name                   = "Admin ΓÇô Fabrikam (sim1)" -> null
+14:08:52.145 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.145 STDOUT [.] terraform:       - id                             = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.146 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - mail                           = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.146 STDOUT [.] terraform:       - mail_nickname                  = "sim1-fk-admin" -> null
+14:08:52.146 STDOUT [.] terraform:       - object_id                      = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc" -> null
+14:08:52.146 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.146 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.146 STDOUT [.] terraform:           - "SMTP:sim1-fk-admin@sreazrwussim1.onmicrosoft.com",
+14:08:52.146 STDOUT [.] terraform:         ] -> null
+14:08:52.146 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.146 STDOUT [.] terraform:       - user_principal_name            = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.146 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.146 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.146 STDOUT [.] terraform:     }
+14:08:52.146 STDOUT [.] terraform:   # azuread_user.org_role["sim1-fabrikam-user"] will be destroyed
+14:08:52.146 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-user"] is not in for_each map)
+14:08:52.146 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.146 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.146 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.146 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.146 STDOUT [.] terraform:       - display_name                   = "User ΓÇô Fabrikam (sim1)" -> null
+14:08:52.146 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.146 STDOUT [.] terraform:       - id                             = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.146 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - mail                           = "sim1-fk-user@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.146 STDOUT [.] terraform:       - mail_nickname                  = "sim1-fk-user" -> null
+14:08:52.146 STDOUT [.] terraform:       - object_id                      = "b1748142-e0c5-4057-83d7-4fbe24e6f890" -> null
+14:08:52.146 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.146 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.146 STDOUT [.] terraform:           - "SMTP:sim1-fk-user@sreazrwussim1.onmicrosoft.com",
+14:08:52.146 STDOUT [.] terraform:         ] -> null
+14:08:52.146 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.146 STDOUT [.] terraform:       - user_principal_name            = "sim1-fk-user@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.146 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.146 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.146 STDOUT [.] terraform:     }
+14:08:52.146 STDOUT [.] terraform:   # azuread_user.org_role["sim1-fabrikam-viewer"] will be destroyed
+14:08:52.146 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-viewer"] is not in for_each map)
+14:08:52.146 STDOUT [.] terraform:   - resource "azuread_user" "org_role" {
+14:08:52.146 STDOUT [.] terraform:       - account_enabled                = true -> null
+14:08:52.146 STDOUT [.] terraform:       - business_phones                = [] -> null
+14:08:52.146 STDOUT [.] terraform:       - disable_password_expiration    = false -> null
+14:08:52.146 STDOUT [.] terraform:       - disable_strong_password        = false -> null
+14:08:52.146 STDOUT [.] terraform:       - display_name                   = "Viewer ΓÇô Fabrikam (sim1)" -> null
+14:08:52.146 STDOUT [.] terraform:       - force_password_change          = false -> null
+14:08:52.147 STDOUT [.] terraform:       - id                             = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.147 STDOUT [.] terraform:       - im_addresses                   = [] -> null
+14:08:52.147 STDOUT [.] terraform:       - mail                           = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.147 STDOUT [.] terraform:       - mail_nickname                  = "sim1-fk-viewer" -> null
+14:08:52.147 STDOUT [.] terraform:       - object_id                      = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c" -> null
+14:08:52.147 STDOUT [.] terraform:       - onpremises_sync_enabled        = false -> null
+14:08:52.147 STDOUT [.] terraform:       - other_mails                    = [] -> null
+14:08:52.147 STDOUT [.] terraform:       - proxy_addresses                = [
+14:08:52.147 STDOUT [.] terraform:           - "SMTP:sim1-fk-viewer@sreazrwussim1.onmicrosoft.com",
+14:08:52.147 STDOUT [.] terraform:         ] -> null
+14:08:52.147 STDOUT [.] terraform:       - show_in_address_list           = true -> null
+14:08:52.147 STDOUT [.] terraform:       - user_principal_name            = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com" -> null
+14:08:52.147 STDOUT [.] terraform:       - user_type                      = "Member" -> null
+14:08:52.147 STDOUT [.] terraform:         # (31 unchanged attributes hidden)
+14:08:52.147 STDOUT [.] terraform:     }
+14:08:52.147 STDOUT [.] terraform:   # random_password.user["sim1-contoso-admin"] will be destroyed
+14:08:52.147 STDOUT [.] terraform:   # (because key ["sim1-contoso-admin"] is not in for_each map)
+14:08:52.147 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.147 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.147 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.147 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.147 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.147 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.147 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.147 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.147 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.147 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.147 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.147 STDOUT [.] terraform:     }
+14:08:52.147 STDOUT [.] terraform:   # random_password.user["sim1-contoso-user"] will be destroyed
+14:08:52.147 STDOUT [.] terraform:   # (because key ["sim1-contoso-user"] is not in for_each map)
+14:08:52.147 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.147 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.147 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.147 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.147 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.147 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.147 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.147 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.147 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.147 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.147 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.147 STDOUT [.] terraform:     }
+14:08:52.147 STDOUT [.] terraform:   # random_password.user["sim1-contoso-viewer"] will be destroyed
+14:08:52.147 STDOUT [.] terraform:   # (because key ["sim1-contoso-viewer"] is not in for_each map)
+14:08:52.147 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.147 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.147 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.147 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.147 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.147 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.147 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.148 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.148 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.148 STDOUT [.] terraform:     }
+14:08:52.148 STDOUT [.] terraform:   # random_password.user["sim1-fabrikam-admin"] will be destroyed
+14:08:52.148 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-admin"] is not in for_each map)
+14:08:52.148 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.148 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.148 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.148 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.148 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.148 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.148 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.148 STDOUT [.] terraform:     }
+14:08:52.148 STDOUT [.] terraform:   # random_password.user["sim1-fabrikam-user"] will be destroyed
+14:08:52.148 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-user"] is not in for_each map)
+14:08:52.148 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.148 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.148 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.148 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.148 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.148 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.148 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.148 STDOUT [.] terraform:     }
+14:08:52.148 STDOUT [.] terraform:   # random_password.user["sim1-fabrikam-viewer"] will be destroyed
+14:08:52.148 STDOUT [.] terraform:   # (because key ["sim1-fabrikam-viewer"] is not in for_each map)
+14:08:52.148 STDOUT [.] terraform:   - resource "random_password" "user" {
+14:08:52.148 STDOUT [.] terraform:       - bcrypt_hash      = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - id               = "none" -> null
+14:08:52.148 STDOUT [.] terraform:       - length           = 20 -> null
+14:08:52.148 STDOUT [.] terraform:       - lower            = true -> null
+14:08:52.148 STDOUT [.] terraform:       - min_lower        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_numeric      = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_special      = 2 -> null
+14:08:52.148 STDOUT [.] terraform:       - min_upper        = 3 -> null
+14:08:52.148 STDOUT [.] terraform:       - number           = true -> null
+14:08:52.148 STDOUT [.] terraform:       - numeric          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - override_special = "!@#%^&*()-_=+[]" -> null
+14:08:52.148 STDOUT [.] terraform:       - result           = (sensitive value) -> null
+14:08:52.148 STDOUT [.] terraform:       - special          = true -> null
+14:08:52.148 STDOUT [.] terraform:       - upper            = true -> null
+14:08:52.148 STDOUT [.] terraform:     }
+14:08:52.148 STDOUT [.] terraform: Plan: 0 to add, 0 to change, 75 to destroy.
+14:08:52.148 STDOUT [.] terraform: Changes to Outputs:
+14:08:52.148 STDOUT [.] terraform:   ~ flat_groups            = {
+14:08:52.148 STDOUT [.] terraform:       - sim1-contoso-dev-admin    = {
+14:08:52.148 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.148 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-dev-admin"
+14:08:52.149 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.149 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-dev-user     = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-dev-user"
+14:08:52.149 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.149 STDOUT [.] terraform:           - role         = "user"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-dev-viewer   = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-dev-viewer"
+14:08:52.149 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.149 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-prd-admin    = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-prd-admin"
+14:08:52.149 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.149 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-prd-user     = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-prd-user"
+14:08:52.149 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.149 STDOUT [.] terraform:           - role         = "user"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-prd-viewer   = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-prd-viewer"
+14:08:52.149 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.149 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa-admin     = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa-admin"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.149 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa-user      = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa-user"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.149 STDOUT [.] terraform:           - role         = "user"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa-viewer    = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa-viewer"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.149 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa2-admin    = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa2-admin"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.149 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa2-user     = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa2-user"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.149 STDOUT [.] terraform:           - role         = "user"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-qa2-viewer   = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.149 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-qa2-viewer"
+14:08:52.149 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.149 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.149 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.149 STDOUT [.] terraform:         }
+14:08:52.149 STDOUT [.] terraform:       - sim1-contoso-tst-admin    = {
+14:08:52.149 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.150 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-tst-admin"
+14:08:52.150 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.150 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.150 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.150 STDOUT [.] terraform:         }
+14:08:52.150 STDOUT [.] terraform:       - sim1-contoso-tst-user     = {
+14:08:52.150 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.150 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-tst-user"
+14:08:52.150 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.150 STDOUT [.] terraform:           - role         = "user"
+14:08:52.150 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.150 STDOUT [.] terraform:         }
+14:08:52.150 STDOUT [.] terraform:       - sim1-contoso-tst-viewer   = {
+14:08:52.150 STDOUT [.] terraform:           - company      = "contoso"
+14:08:52.150 STDOUT [.] terraform:           - display_name = "sg-sim1-cs-tst-viewer"
+14:08:52.150 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.150 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.150 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.150 STDOUT [.] terraform:         }
+14:08:52.150 STDOUT [.] terraform:       - sim1-fabrikam-dev-admin   = {
+14:08:52.150 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.150 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-dev-admin"
+14:08:52.150 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.150 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.150 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.150 STDOUT [.] terraform:         }
+14:08:52.150 STDOUT [.] terraform:       - sim1-fabrikam-dev-user    = {
+14:08:52.150 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.150 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-dev-user"
+14:08:52.150 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.150 STDOUT [.] terraform:           - role         = "user"
+14:08:52.150 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.150 STDOUT [.] terraform:         }
+14:08:52.150 STDOUT [.] terraform:       - sim1-fabrikam-dev-viewer  = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-dev-viewer"
+14:08:52.151 STDOUT [.] terraform:           - env          = "dev"
+14:08:52.151 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-prd-admin   = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-prd-admin"
+14:08:52.151 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.151 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-prd-user    = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-prd-user"
+14:08:52.151 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.151 STDOUT [.] terraform:           - role         = "user"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-prd-viewer  = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-prd-viewer"
+14:08:52.151 STDOUT [.] terraform:           - env          = "prd"
+14:08:52.151 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa-admin    = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa-admin"
+14:08:52.151 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.151 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa-user     = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa-user"
+14:08:52.151 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.151 STDOUT [.] terraform:           - role         = "user"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa-viewer   = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa-viewer"
+14:08:52.151 STDOUT [.] terraform:           - env          = "qa"
+14:08:52.151 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa2-admin   = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa2-admin"
+14:08:52.151 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.151 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa2-user    = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa2-user"
+14:08:52.151 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.151 STDOUT [.] terraform:           - role         = "user"
+14:08:52.151 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.151 STDOUT [.] terraform:         }
+14:08:52.151 STDOUT [.] terraform:       - sim1-fabrikam-qa2-viewer  = {
+14:08:52.151 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.151 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-qa2-viewer"
+14:08:52.152 STDOUT [.] terraform:           - env          = "qa2"
+14:08:52.152 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-tst-admin   = {
+14:08:52.152 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-tst-admin"
+14:08:52.152 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.152 STDOUT [.] terraform:           - role         = "admin"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-tst-user    = {
+14:08:52.152 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-tst-user"
+14:08:52.152 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.152 STDOUT [.] terraform:           - role         = "user"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-tst-viewer  = {
+14:08:52.152 STDOUT [.] terraform:           - company      = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - display_name = "sg-sim1-fk-tst-viewer"
+14:08:52.152 STDOUT [.] terraform:           - env          = "tst"
+14:08:52.152 STDOUT [.] terraform:           - role         = "viewer"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key   = "sim1"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:         # (15 unchanged attributes hidden)
+14:08:52.152 STDOUT [.] terraform:     }
+14:08:52.152 STDOUT [.] terraform:   ~ flat_users             = {
+14:08:52.152 STDOUT [.] terraform:       - sim1-contoso-admin    = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "cs"
+14:08:52.152 STDOUT [.] terraform:           - company    = "contoso"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "cs.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "admin"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.152 STDOUT [.] terraform:           - upn        = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-contoso-user     = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "cs"
+14:08:52.152 STDOUT [.] terraform:           - company    = "contoso"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "cs.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "user"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.152 STDOUT [.] terraform:           - upn        = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-contoso-viewer   = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "cs"
+14:08:52.152 STDOUT [.] terraform:           - company    = "contoso"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "cs.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "viewer"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.152 STDOUT [.] terraform:           - upn        = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-admin   = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "fk"
+14:08:52.152 STDOUT [.] terraform:           - company    = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "fk.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "admin"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.152 STDOUT [.] terraform:           - upn        = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-user    = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "fk"
+14:08:52.152 STDOUT [.] terraform:           - company    = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "fk.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "user"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.152 STDOUT [.] terraform:           - upn        = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.152 STDOUT [.] terraform:         }
+14:08:52.152 STDOUT [.] terraform:       - sim1-fabrikam-viewer  = {
+14:08:52.152 STDOUT [.] terraform:           - code       = "fk"
+14:08:52.152 STDOUT [.] terraform:           - company    = "fabrikam"
+14:08:52.152 STDOUT [.] terraform:           - domain     = "fk.sim1.tenants.cloud.hwd.mx"
+14:08:52.152 STDOUT [.] terraform:           - role       = "viewer"
+14:08:52.152 STDOUT [.] terraform:           - tenant_key = "sim1"
+14:08:52.153 STDOUT [.] terraform:           - upn        = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.153 STDOUT [.] terraform:         }
+14:08:52.153 STDOUT [.] terraform:         # (3 unchanged attributes hidden)
+14:08:52.153 STDOUT [.] terraform:     }
+14:08:52.153 STDOUT [.] terraform:   ~ group_display_names    = {
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-admin    = "sg-sim1-cs-dev-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-user     = "sg-sim1-cs-dev-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-viewer   = "sg-sim1-cs-dev-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-admin    = "sg-sim1-cs-prd-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-user     = "sg-sim1-cs-prd-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-viewer   = "sg-sim1-cs-prd-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa-admin     = "sg-sim1-cs-qa-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa-user      = "sg-sim1-cs-qa-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa-viewer    = "sg-sim1-cs-qa-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa2-admin    = "sg-sim1-cs-qa2-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa2-user     = "sg-sim1-cs-qa2-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa2-viewer   = "sg-sim1-cs-qa2-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-tst-admin    = "sg-sim1-cs-tst-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-tst-user     = "sg-sim1-cs-tst-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-tst-viewer   = "sg-sim1-cs-tst-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-dev-admin   = "sg-sim1-fk-dev-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-dev-user    = "sg-sim1-fk-dev-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-dev-viewer  = "sg-sim1-fk-dev-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-prd-admin   = "sg-sim1-fk-prd-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-prd-user    = "sg-sim1-fk-prd-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-prd-viewer  = "sg-sim1-fk-prd-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa-admin    = "sg-sim1-fk-qa-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa-user     = "sg-sim1-fk-qa-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa-viewer   = "sg-sim1-fk-qa-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa2-admin   = "sg-sim1-fk-qa2-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa2-user    = "sg-sim1-fk-qa2-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-qa2-viewer  = "sg-sim1-fk-qa2-viewer"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-tst-admin   = "sg-sim1-fk-tst-admin"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-tst-user    = "sg-sim1-fk-tst-user"
+14:08:52.153 STDOUT [.] terraform:       - sim1-fabrikam-tst-viewer  = "sg-sim1-fk-tst-viewer"
+14:08:52.153 STDOUT [.] terraform:         # (15 unchanged attributes hidden)
+14:08:52.153 STDOUT [.] terraform:     }
+14:08:52.153 STDOUT [.] terraform:   ~ group_object_ids       = {
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-admin    = "c44b348f-2bd2-4992-bf09-48b7a504c822"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-user     = "9f92c56b-2419-4001-b65c-19ca6ffbc422"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-dev-viewer   = "5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-admin    = "ac391fda-e490-40ac-92ef-d8c908747671"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-user     = "6e25067e-f1c9-41d6-ae3a-6b661dbb71ad"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-prd-viewer   = "15f39352-f836-44d4-a8ff-8a1a84ec43f9"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa-admin     = "9ed66a80-184e-4e0f-bda6-ef0b82a2911e"
+14:08:52.153 STDOUT [.] terraform:       - sim1-contoso-qa-user      = "95ec7db4-99cb-44d8-9a3f-c2fac3d7e0fa"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-qa-viewer    = "e02a2838-5f07-42d5-ba6a-7d7d13a1ba4f"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-qa2-admin    = "e53d4cd3-92ab-4d4b-b3c9-2ffa30d59fe0"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-qa2-user     = "eb00cd3b-f098-449e-8649-ef7bece61d74"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-qa2-viewer   = "b11bbe96-46e3-4783-b322-8c0389a366c0"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-tst-admin    = "3c6ed00e-43cc-4cc7-a299-fe497b51e8a6"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-tst-user     = "df416e17-c1bc-4f20-a68e-6de6e9218b92"
+14:08:52.154 STDOUT [.] terraform:       - sim1-contoso-tst-viewer   = "82e9edfe-2124-4fc6-b403-10d7b9df2c6f"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-dev-admin   = "a45e8721-82a0-4dde-8601-2874802d85e5"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-dev-user    = "c201ca87-9214-4f36-b9a3-88b32ad3e7bf"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-dev-viewer  = "d8b7de74-791a-4535-b8d0-684106325113"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-prd-admin   = "bcfe0d85-1bb6-4bed-95d8-86837600ba80"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-prd-user    = "c9f09834-4b2c-4471-ba55-514c7801d5b3"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-prd-viewer  = "10d28d85-4ff9-4cee-9be5-63bb04df07cc"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa-admin    = "54c1f487-ab2e-4d1d-ab22-1597d7c4a150"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa-user     = "46fa650f-1ce3-4c48-b805-25c330e8b085"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa-viewer   = "4b0ecac9-f2f4-4bf7-aabd-b9440fe149ac"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa2-admin   = "a6ac68c1-3fc5-4517-bc48-ef3ae6d12128"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa2-user    = "3de6935e-640e-47c7-96eb-62b3c197475f"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-qa2-viewer  = "4600ced9-3265-4157-9c79-6a9b7ec28e35"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-tst-admin   = "5eb3e670-9560-4b10-88b8-e9f2a7076237"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-tst-user    = "ee37a891-595b-4082-a432-c36d99bde618"
+14:08:52.154 STDOUT [.] terraform:       - sim1-fabrikam-tst-viewer  = "fcda5c7d-57d1-46fb-9292-a924660faaad"
+14:08:52.154 STDOUT [.] terraform:         # (15 unchanged attributes hidden)
+14:08:52.154 STDOUT [.] terraform:     }
+14:08:52.154 STDOUT [.] terraform:   ~ simulated_tenants      = {
+14:08:52.154 STDOUT [.] terraform:       ~ sim1 = {
+14:08:52.154 STDOUT [.] terraform:           ~ orgs        = {
+14:08:52.154 STDOUT [.] terraform:               - contoso   = {
+14:08:52.154 STDOUT [.] terraform:                   - code   = "cs"
+14:08:52.154 STDOUT [.] terraform:                   - domain = "cs.sim1.tenants.cloud.hwd.mx"
+14:08:52.154 STDOUT [.] terraform:                   - envs   = {
+14:08:52.154 STDOUT [.] terraform:                       - dev = {
+14:08:52.154 STDOUT [.] terraform:                           - cp_service = "cp-dev"
+14:08:52.154 STDOUT [.] terraform:                           - groups     = {
+14:08:52.154 STDOUT [.] terraform:                               - admin  = "sg-sim1-cs-dev-admin"
+14:08:52.154 STDOUT [.] terraform:                               - user   = "sg-sim1-cs-dev-user"
+14:08:52.154 STDOUT [.] terraform:                               - viewer = "sg-sim1-cs-dev-viewer"
+14:08:52.154 STDOUT [.] terraform:                             }
+14:08:52.154 STDOUT [.] terraform:                           - identifier = "org-sim1-cs-dev"
+14:08:52.154 STDOUT [.] terraform:                           - users      = {
+14:08:52.154 STDOUT [.] terraform:                               - admin  = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                               - user   = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                               - viewer = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                             }
+14:08:52.154 STDOUT [.] terraform:                         }
+14:08:52.154 STDOUT [.] terraform:                       - prd = {
+14:08:52.154 STDOUT [.] terraform:                           - cp_service = "cp-prd"
+14:08:52.154 STDOUT [.] terraform:                           - groups     = {
+14:08:52.154 STDOUT [.] terraform:                               - admin  = "sg-sim1-cs-prd-admin"
+14:08:52.154 STDOUT [.] terraform:                               - user   = "sg-sim1-cs-prd-user"
+14:08:52.154 STDOUT [.] terraform:                               - viewer = "sg-sim1-cs-prd-viewer"
+14:08:52.154 STDOUT [.] terraform:                             }
+14:08:52.154 STDOUT [.] terraform:                           - identifier = "org-sim1-cs-prd"
+14:08:52.154 STDOUT [.] terraform:                           - users      = {
+14:08:52.154 STDOUT [.] terraform:                               - admin  = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                               - user   = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                               - viewer = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.154 STDOUT [.] terraform:                             }
+14:08:52.154 STDOUT [.] terraform:                         }
+14:08:52.154 STDOUT [.] terraform:                       - qa  = {
+14:08:52.154 STDOUT [.] terraform:                           - cp_service = "cp-qa"
+14:08:52.154 STDOUT [.] terraform:                           - groups     = {
+14:08:52.154 STDOUT [.] terraform:                               - admin  = "sg-sim1-cs-qa-admin"
+14:08:52.154 STDOUT [.] terraform:                               - user   = "sg-sim1-cs-qa-user"
+14:08:52.154 STDOUT [.] terraform:                               - viewer = "sg-sim1-cs-qa-viewer"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                           - identifier = "org-sim1-cs-qa"
+14:08:52.155 STDOUT [.] terraform:                           - users      = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                         }
+14:08:52.155 STDOUT [.] terraform:                       - qa2 = {
+14:08:52.155 STDOUT [.] terraform:                           - cp_service = "cp-qa2"
+14:08:52.155 STDOUT [.] terraform:                           - groups     = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sg-sim1-cs-qa2-admin"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sg-sim1-cs-qa2-user"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sg-sim1-cs-qa2-viewer"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                           - identifier = "org-sim1-cs-qa2"
+14:08:52.155 STDOUT [.] terraform:                           - users      = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                         }
+14:08:52.155 STDOUT [.] terraform:                       - tst = {
+14:08:52.155 STDOUT [.] terraform:                           - cp_service = "cp-tst"
+14:08:52.155 STDOUT [.] terraform:                           - groups     = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sg-sim1-cs-tst-admin"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sg-sim1-cs-tst-user"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sg-sim1-cs-tst-viewer"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                           - identifier = "org-sim1-cs-tst"
+14:08:52.155 STDOUT [.] terraform:                           - users      = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                         }
+14:08:52.155 STDOUT [.] terraform:                     }
+14:08:52.155 STDOUT [.] terraform:                 }
+14:08:52.155 STDOUT [.] terraform:               - fabrikam  = {
+14:08:52.155 STDOUT [.] terraform:                   - code   = "fk"
+14:08:52.155 STDOUT [.] terraform:                   - domain = "fk.sim1.tenants.cloud.hwd.mx"
+14:08:52.155 STDOUT [.] terraform:                   - envs   = {
+14:08:52.155 STDOUT [.] terraform:                       - dev = {
+14:08:52.155 STDOUT [.] terraform:                           - cp_service = "cp-dev"
+14:08:52.155 STDOUT [.] terraform:                           - groups     = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sg-sim1-fk-dev-admin"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sg-sim1-fk-dev-user"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sg-sim1-fk-dev-viewer"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                           - identifier = "org-sim1-fk-dev"
+14:08:52.155 STDOUT [.] terraform:                           - users      = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                         }
+14:08:52.155 STDOUT [.] terraform:                       - prd = {
+14:08:52.155 STDOUT [.] terraform:                           - cp_service = "cp-prd"
+14:08:52.155 STDOUT [.] terraform:                           - groups     = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sg-sim1-fk-prd-admin"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sg-sim1-fk-prd-user"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sg-sim1-fk-prd-viewer"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                           - identifier = "org-sim1-fk-prd"
+14:08:52.155 STDOUT [.] terraform:                           - users      = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                               - viewer = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.155 STDOUT [.] terraform:                             }
+14:08:52.155 STDOUT [.] terraform:                         }
+14:08:52.155 STDOUT [.] terraform:                       - qa  = {
+14:08:52.155 STDOUT [.] terraform:                           - cp_service = "cp-qa"
+14:08:52.155 STDOUT [.] terraform:                           - groups     = {
+14:08:52.155 STDOUT [.] terraform:                               - admin  = "sg-sim1-fk-qa-admin"
+14:08:52.155 STDOUT [.] terraform:                               - user   = "sg-sim1-fk-qa-user"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sg-sim1-fk-qa-viewer"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                           - identifier = "org-sim1-fk-qa"
+14:08:52.157 STDOUT [.] terraform:                           - users      = {
+14:08:52.157 STDOUT [.] terraform:                               - admin  = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - user   = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                         }
+14:08:52.157 STDOUT [.] terraform:                       - qa2 = {
+14:08:52.157 STDOUT [.] terraform:                           - cp_service = "cp-qa2"
+14:08:52.157 STDOUT [.] terraform:                           - groups     = {
+14:08:52.157 STDOUT [.] terraform:                               - admin  = "sg-sim1-fk-qa2-admin"
+14:08:52.157 STDOUT [.] terraform:                               - user   = "sg-sim1-fk-qa2-user"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sg-sim1-fk-qa2-viewer"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                           - identifier = "org-sim1-fk-qa2"
+14:08:52.157 STDOUT [.] terraform:                           - users      = {
+14:08:52.157 STDOUT [.] terraform:                               - admin  = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - user   = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                         }
+14:08:52.157 STDOUT [.] terraform:                       - tst = {
+14:08:52.157 STDOUT [.] terraform:                           - cp_service = "cp-tst"
+14:08:52.157 STDOUT [.] terraform:                           - groups     = {
+14:08:52.157 STDOUT [.] terraform:                               - admin  = "sg-sim1-fk-tst-admin"
+14:08:52.157 STDOUT [.] terraform:                               - user   = "sg-sim1-fk-tst-user"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sg-sim1-fk-tst-viewer"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                           - identifier = "org-sim1-fk-tst"
+14:08:52.157 STDOUT [.] terraform:                           - users      = {
+14:08:52.157 STDOUT [.] terraform:                               - admin  = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - user   = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                               - viewer = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:                             }
+14:08:52.157 STDOUT [.] terraform:                         }
+14:08:52.157 STDOUT [.] terraform:                     }
+14:08:52.157 STDOUT [.] terraform:                 }
+14:08:52.157 STDOUT [.] terraform:                 # (1 unchanged attribute hidden)
+14:08:52.157 STDOUT [.] terraform:             }
+14:08:52.157 STDOUT [.] terraform:             # (1 unchanged attribute hidden)
+14:08:52.157 STDOUT [.] terraform:         }
+14:08:52.157 STDOUT [.] terraform:     }
+14:08:52.157 STDOUT [.] terraform:   ~ user_initial_passwords = (sensitive value)
+14:08:52.157 STDOUT [.] terraform:   ~ user_object_ids        = {
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-admin    = "aa222cb1-eb3b-4458-89ec-ecba1a59101e"
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-user     = "14853fe9-f01d-43f1-8162-fad1054ad7a8"
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-viewer   = "7b96d539-05d6-4973-8005-5a8703f0c2fd"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-admin   = "924f1703-ba0b-4d5d-b36e-e9920de2e0cc"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-user    = "b1748142-e0c5-4057-83d7-4fbe24e6f890"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-viewer  = "dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c"
+14:08:52.157 STDOUT [.] terraform:         # (3 unchanged attributes hidden)
+14:08:52.157 STDOUT [.] terraform:     }
+14:08:52.157 STDOUT [.] terraform:   ~ user_upns              = {
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-admin    = "sim1-cs-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-user     = "sim1-cs-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:       - sim1-contoso-viewer   = "sim1-cs-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-admin   = "sim1-fk-admin@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-user    = "sim1-fk-user@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:       - sim1-fabrikam-viewer  = "sim1-fk-viewer@sreazrwussim1.onmicrosoft.com"
+14:08:52.157 STDOUT [.] terraform:         # (3 unchanged attributes hidden)
+14:08:52.157 STDOUT [.] terraform:     }
+14:08:52.157 STDOUT [.] terraform: ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+14:08:52.157 STDOUT [.] terraform: Note: You didn't use the -out option to save this plan, so Terraform can't
+14:08:52.157 STDOUT [.] terraform: guarantee to take exactly these actions if you run "terraform apply" now.
+14:08:52.548 STDOUT [.] terraform: Releasing state lock. This may take a few moments...

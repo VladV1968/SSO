@@ -1,0 +1,416 @@
+
+=== STEP 1: NX CLOUD CORE RESOURCES ===
+  Importing: azuread_application.nxcloud["sim1"]
+  FAILED: azuread_application.nxcloud["sim1"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_service_principal.nxcloud["sim1"]
+  FAILED: azuread_service_principal.nxcloud["sim1"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_claims_mapping_policy.nxcloud_saml["sim1"]
+  FAILED: azuread_claims_mapping_policy.nxcloud_saml["sim1"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_service_principal_claims_mapping_policy_assignment.nxcloud_saml["sim1"]
+  FAILED: azuread_service_principal_claims_mapping_policy_assignment.nxcloud_saml["sim1"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+
+=== STEP 2: SECURITY GROUPS ===
+  Importing: azuread_group.org_env_role["sim1-contoso-dev-admin"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-dev-user"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-dev-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-dev-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-prd-admin"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-prd-user"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-prd-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-prd-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-prd-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa-admin"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa-user"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa2-admin"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa2-user"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa2-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-qa2-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-tst-admin"]
+  OK
+  Importing: azuread_group.org_env_role["sim1-contoso-tst-user"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-tst-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-contoso-tst-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-contoso-tst-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-dev-admin"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-dev-user"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-dev-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-dev-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-prd-admin"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-prd-user"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-prd-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-prd-viewer"]
+  OK
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa-admin"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-qa-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa-user"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-qa-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-qa-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa2-admin"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa2-user"]
+  OK
+  Importing: azuread_group.org_env_role["sim1-fabrikam-qa2-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-tst-admin"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-tst-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-fabrikam-tst-user"]
+  OK
+  Importing: azuread_group.org_env_role["sim1-fabrikam-tst-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-fabrikam-tst-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-dev-admin"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-dev-user"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-dev-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-dev-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-prd-admin"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-prd-user"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-prd-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-prd-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-prd-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa-admin"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa-user"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa2-admin"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa2-user"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa2-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-qa2-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-tst-admin"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-tst-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-tst-user"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-tst-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group.org_env_role["sim1-northwind-tst-viewer"]
+  FAILED: azuread_group.org_env_role["sim1-northwind-tst-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+
+=== STEP 3: USERS ===
+  Importing: azuread_user.org_role["sim1-contoso-admin"]
+  FAILED: azuread_user.org_role["sim1-contoso-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_user.org_role["sim1-contoso-user"]
+  FAILED: azuread_user.org_role["sim1-contoso-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_user.org_role["sim1-contoso-viewer"]
+  FAILED: azuread_user.org_role["sim1-contoso-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_user.org_role["sim1-fabrikam-admin"]
+  OK
+  Importing: azuread_user.org_role["sim1-fabrikam-user"]
+  OK
+  Importing: azuread_user.org_role["sim1-fabrikam-viewer"]
+  FAILED: azuread_user.org_role["sim1-fabrikam-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_user.org_role["sim1-northwind-admin"]
+  OK
+  Importing: azuread_user.org_role["sim1-northwind-user"]
+  FAILED: azuread_user.org_role["sim1-northwind-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_user.org_role["sim1-northwind-viewer"]
+  FAILED: azuread_user.org_role["sim1-northwind-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+
+=== STEP 4: GROUP MEMBERSHIPS ===
+  Importing: azuread_group_member.user_env_role["sim1-contoso-dev-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-dev-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-dev-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-dev-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-prd-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-prd-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-prd-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-prd-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-prd-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa2-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa2-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa2-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-qa2-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-tst-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-tst-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-tst-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-tst-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-contoso-tst-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-contoso-tst-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-dev-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-dev-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-dev-viewer"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-prd-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-prd-user"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-prd-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-prd-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa-admin"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-qa-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa-viewer"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa2-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa2-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-qa2-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-qa2-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-tst-admin"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-tst-user"]
+  OK
+  Importing: azuread_group_member.user_env_role["sim1-fabrikam-tst-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-fabrikam-tst-viewer"]
+  10:57:59.199 STDOUT [.] terraform: Acquiring state lock. This may take a few moments...
+  Importing: azuread_group_member.user_env_role["sim1-northwind-dev-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-dev-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-dev-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-dev-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-dev-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-dev-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-prd-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-prd-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-prd-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-prd-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-prd-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-prd-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa-user"]
+  
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa2-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa2-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa2-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa2-user"]
+  
+  Importing: azuread_group_member.user_env_role["sim1-northwind-qa2-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-qa2-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-tst-admin"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-tst-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-tst-user"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-tst-user"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_group_member.user_env_role["sim1-northwind-tst-viewer"]
+  FAILED: azuread_group_member.user_env_role["sim1-northwind-tst-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+
+=== STEP 5: APP ROLE ASSIGNMENTS ===
+  Importing: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-admin"]
+  FAILED: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-admin"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+  Importing: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"]
+  FAILED: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"]
+  System.Management.Automation.RemoteException * Failed to execute "terraform import azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"] 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/6T-FFB3w8UOBYvrRBUrXqJO0kew7L8lDrpSevZw7BKU" in .\.terragrunt-cache\7FaPNRdIgnXtwukXM3Ii9zib48Q\SSNKIGoR3hAa_tf3nHa5uCvUKIA      exit status 0xffffffff System.Management.Automation.RemoteException
+  Importing: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-viewer"]
+  FAILED: azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-viewer"]
+    Γò╡         exit status 1 System.Management.Automation.RemoteException
+
+=== IMPORT SUMMARY ===
+Succeeded: 13
+Failed:    93
+
+Failed resources:
+  azuread_application.nxcloud["sim1"] => /applications/e8687e54-6adb-4959-9db1-305b334ee145
+  azuread_service_principal.nxcloud["sim1"] => 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450
+  azuread_claims_mapping_policy.nxcloud_saml["sim1"] => be2ce858-a4e6-43f7-8560-ef102ee946b6
+  azuread_service_principal_claims_mapping_policy_assignment.nxcloud_saml["sim1"] => 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/claimsMappingPolicy/be2ce858-a4e6-43f7-8560-ef102ee946b6
+  azuread_group.org_env_role["sim1-contoso-dev-admin"] => c44b348f-2bd2-4992-bf09-48b7a504c822
+  azuread_group.org_env_role["sim1-contoso-dev-user"] => 9f92c56b-2419-4001-b65c-19ca6ffbc422
+  azuread_group.org_env_role["sim1-contoso-dev-viewer"] => 5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11
+  azuread_group.org_env_role["sim1-contoso-prd-admin"] => ac391fda-e490-40ac-92ef-d8c908747671
+  azuread_group.org_env_role["sim1-contoso-prd-user"] => 6e25067e-f1c9-41d6-ae3a-6b661dbb71ad
+  azuread_group.org_env_role["sim1-contoso-prd-viewer"] => 15f39352-f836-44d4-a8ff-8a1a84ec43f9
+  azuread_group.org_env_role["sim1-contoso-qa-admin"] => 9ed66a80-184e-4e0f-bda6-ef0b82a2911e
+  azuread_group.org_env_role["sim1-contoso-qa-user"] => 719a4777-b67c-4622-bea6-637d99a65cd6
+  azuread_group.org_env_role["sim1-contoso-qa-viewer"] => 6a8fc338-fdec-4167-8084-8540f8552f2b
+  azuread_group.org_env_role["sim1-contoso-qa2-admin"] => 6253fde5-916b-4fe6-aab3-6ec7781f6fb9
+  azuread_group.org_env_role["sim1-contoso-qa2-user"] => eb00cd3b-f098-449e-8649-ef7bece61d74
+  azuread_group.org_env_role["sim1-contoso-qa2-viewer"] => d267cae7-9968-4f2d-a592-6a68ef7c68fc
+  azuread_group.org_env_role["sim1-contoso-tst-user"] => df416e17-c1bc-4f20-a68e-6de6e9218b92
+  azuread_group.org_env_role["sim1-contoso-tst-viewer"] => a07dbdb4-befd-4351-a66a-2c718fa1b213
+  azuread_group.org_env_role["sim1-fabrikam-dev-admin"] => 15c05556-9624-4536-865d-3bb03cbf68b0
+  azuread_group.org_env_role["sim1-fabrikam-dev-user"] => c201ca87-9214-4f36-b9a3-88b32ad3e7bf
+  azuread_group.org_env_role["sim1-fabrikam-dev-viewer"] => d8b7de74-791a-4535-b8d0-684106325113
+  azuread_group.org_env_role["sim1-fabrikam-prd-admin"] => e531bb41-0e43-4bc2-aaaf-1048f5fc99ef
+  azuread_group.org_env_role["sim1-fabrikam-prd-user"] => 11e0fdbe-471d-45b2-9f16-15f0b652fb6e
+  azuread_group.org_env_role["sim1-fabrikam-qa-admin"] => 54c1f487-ab2e-4d1d-ab22-1597d7c4a150
+  azuread_group.org_env_role["sim1-fabrikam-qa-user"] => da70bf48-84a0-4498-a6e0-bace9f5e347a
+  azuread_group.org_env_role["sim1-fabrikam-qa-viewer"] => e7be92c9-11c8-47f4-be06-8ec8ed54fcda
+  azuread_group.org_env_role["sim1-fabrikam-qa2-admin"] => 8a128ba8-e0bc-4acb-a558-6f37801c8212
+  azuread_group.org_env_role["sim1-fabrikam-qa2-viewer"] => 4600ced9-3265-4157-9c79-6a9b7ec28e35
+  azuread_group.org_env_role["sim1-fabrikam-tst-admin"] => dd142443-8fc3-439a-a352-4799e3fda9a2
+  azuread_group.org_env_role["sim1-fabrikam-tst-viewer"] => 7a793658-19f2-43c7-9f3c-d21c00516fe0
+  azuread_group.org_env_role["sim1-northwind-dev-admin"] => 325e9cfa-9322-416f-b4ec-3ad8fbebf660
+  azuread_group.org_env_role["sim1-northwind-dev-user"] => f9614dd9-2594-4c25-b5ba-ee361b747b35
+  azuread_group.org_env_role["sim1-northwind-dev-viewer"] => c3e6ef73-6849-497b-b391-0d48a25fd042
+  azuread_group.org_env_role["sim1-northwind-prd-admin"] => f029ac7e-fe26-4f27-8056-e54026f84ea8
+  azuread_group.org_env_role["sim1-northwind-prd-user"] => f0964ba0-712e-432d-824b-f4e0f58d20ff
+  azuread_group.org_env_role["sim1-northwind-prd-viewer"] => 55980c5a-ff04-44c4-9a13-8609fac67f81
+  azuread_group.org_env_role["sim1-northwind-qa-admin"] => 1df7c963-f4f1-4a17-a6ff-87c1e1fc09d4
+  azuread_group.org_env_role["sim1-northwind-qa-user"] => d48d0010-285e-49ff-8e09-3e6a3afacb6f
+  azuread_group.org_env_role["sim1-northwind-qa-viewer"] => 7524c970-8200-426d-87af-87ef12975528
+  azuread_group.org_env_role["sim1-northwind-qa2-admin"] => 64704eff-8538-49ca-9cb2-1e3f53e401de
+  azuread_group.org_env_role["sim1-northwind-qa2-user"] => 60a95217-7d07-4c50-9a39-eb736c4194b0
+  azuread_group.org_env_role["sim1-northwind-qa2-viewer"] => 6ad35ba9-7af5-4017-9315-daa571984215
+  azuread_group.org_env_role["sim1-northwind-tst-admin"] => e4c95c70-44d4-4e41-9729-5bed1817ea04
+  azuread_group.org_env_role["sim1-northwind-tst-user"] => 9db48c3e-f118-407d-9e52-5fa587d5c229
+  azuread_group.org_env_role["sim1-northwind-tst-viewer"] => 130c5e5a-7cfc-4786-93c8-7239af0a1805
+  azuread_user.org_role["sim1-contoso-admin"] => aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_user.org_role["sim1-contoso-user"] => 14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_user.org_role["sim1-contoso-viewer"] => 7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_user.org_role["sim1-fabrikam-viewer"] => dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c
+  azuread_user.org_role["sim1-northwind-user"] => b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_user.org_role["sim1-northwind-viewer"] => 4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_group_member.user_env_role["sim1-contoso-dev-admin"] => c44b348f-2bd2-4992-bf09-48b7a504c822/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_group_member.user_env_role["sim1-contoso-dev-user"] => 9f92c56b-2419-4001-b65c-19ca6ffbc422/member/14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_group_member.user_env_role["sim1-contoso-dev-viewer"] => 5b49d3c5-7b2e-45e2-8fd6-0d8d49fa0d11/member/7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_group_member.user_env_role["sim1-contoso-prd-admin"] => ac391fda-e490-40ac-92ef-d8c908747671/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_group_member.user_env_role["sim1-contoso-prd-user"] => 6e25067e-f1c9-41d6-ae3a-6b661dbb71ad/member/14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_group_member.user_env_role["sim1-contoso-prd-viewer"] => 15f39352-f836-44d4-a8ff-8a1a84ec43f9/member/7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_group_member.user_env_role["sim1-contoso-qa-admin"] => 9ed66a80-184e-4e0f-bda6-ef0b82a2911e/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_group_member.user_env_role["sim1-contoso-qa-user"] => 719a4777-b67c-4622-bea6-637d99a65cd6/member/14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_group_member.user_env_role["sim1-contoso-qa-viewer"] => 6a8fc338-fdec-4167-8084-8540f8552f2b/member/7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_group_member.user_env_role["sim1-contoso-qa2-admin"] => 6253fde5-916b-4fe6-aab3-6ec7781f6fb9/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_group_member.user_env_role["sim1-contoso-qa2-user"] => eb00cd3b-f098-449e-8649-ef7bece61d74/member/14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_group_member.user_env_role["sim1-contoso-qa2-viewer"] => d267cae7-9968-4f2d-a592-6a68ef7c68fc/member/7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_group_member.user_env_role["sim1-contoso-tst-admin"] => 3c6ed00e-43cc-4cc7-a299-fe497b51e8a6/member/aa222cb1-eb3b-4458-89ec-ecba1a59101e
+  azuread_group_member.user_env_role["sim1-contoso-tst-user"] => df416e17-c1bc-4f20-a68e-6de6e9218b92/member/14853fe9-f01d-43f1-8162-fad1054ad7a8
+  azuread_group_member.user_env_role["sim1-contoso-tst-viewer"] => a07dbdb4-befd-4351-a66a-2c718fa1b213/member/7b96d539-05d6-4973-8005-5a8703f0c2fd
+  azuread_group_member.user_env_role["sim1-fabrikam-dev-admin"] => 15c05556-9624-4536-865d-3bb03cbf68b0/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc
+  azuread_group_member.user_env_role["sim1-fabrikam-dev-user"] => c201ca87-9214-4f36-b9a3-88b32ad3e7bf/member/b1748142-e0c5-4057-83d7-4fbe24e6f890
+  azuread_group_member.user_env_role["sim1-fabrikam-prd-admin"] => e531bb41-0e43-4bc2-aaaf-1048f5fc99ef/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc
+  azuread_group_member.user_env_role["sim1-fabrikam-prd-viewer"] => 10d28d85-4ff9-4cee-9be5-63bb04df07cc/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c
+  azuread_group_member.user_env_role["sim1-fabrikam-qa-user"] => da70bf48-84a0-4498-a6e0-bace9f5e347a/member/b1748142-e0c5-4057-83d7-4fbe24e6f890
+  azuread_group_member.user_env_role["sim1-fabrikam-qa2-admin"] => 8a128ba8-e0bc-4acb-a558-6f37801c8212/member/924f1703-ba0b-4d5d-b36e-e9920de2e0cc
+  azuread_group_member.user_env_role["sim1-fabrikam-qa2-user"] => 3de6935e-640e-47c7-96eb-62b3c197475f/member/b1748142-e0c5-4057-83d7-4fbe24e6f890
+  azuread_group_member.user_env_role["sim1-fabrikam-qa2-viewer"] => 4600ced9-3265-4157-9c79-6a9b7ec28e35/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c
+  azuread_group_member.user_env_role["sim1-fabrikam-tst-viewer"] => 7a793658-19f2-43c7-9f3c-d21c00516fe0/member/dbb136dc-fb6e-46d8-83a3-4b9b8a462e3c
+  azuread_group_member.user_env_role["sim1-northwind-dev-admin"] => 325e9cfa-9322-416f-b4ec-3ad8fbebf660/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114
+  azuread_group_member.user_env_role["sim1-northwind-dev-user"] => f9614dd9-2594-4c25-b5ba-ee361b747b35/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_group_member.user_env_role["sim1-northwind-dev-viewer"] => c3e6ef73-6849-497b-b391-0d48a25fd042/member/4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_group_member.user_env_role["sim1-northwind-prd-admin"] => f029ac7e-fe26-4f27-8056-e54026f84ea8/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114
+  azuread_group_member.user_env_role["sim1-northwind-prd-user"] => f0964ba0-712e-432d-824b-f4e0f58d20ff/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_group_member.user_env_role["sim1-northwind-prd-viewer"] => 55980c5a-ff04-44c4-9a13-8609fac67f81/member/4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_group_member.user_env_role["sim1-northwind-qa-admin"] => 1df7c963-f4f1-4a17-a6ff-87c1e1fc09d4/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114
+  azuread_group_member.user_env_role["sim1-northwind-qa-user"] => d48d0010-285e-49ff-8e09-3e6a3afacb6f/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_group_member.user_env_role["sim1-northwind-qa-viewer"] => 7524c970-8200-426d-87af-87ef12975528/member/4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_group_member.user_env_role["sim1-northwind-qa2-admin"] => 64704eff-8538-49ca-9cb2-1e3f53e401de/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114
+  azuread_group_member.user_env_role["sim1-northwind-qa2-user"] => 60a95217-7d07-4c50-9a39-eb736c4194b0/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_group_member.user_env_role["sim1-northwind-qa2-viewer"] => 6ad35ba9-7af5-4017-9315-daa571984215/member/4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_group_member.user_env_role["sim1-northwind-tst-admin"] => e4c95c70-44d4-4e41-9729-5bed1817ea04/member/48b4bac3-1b67-463e-9114-fa7a2c4d5114
+  azuread_group_member.user_env_role["sim1-northwind-tst-user"] => 9db48c3e-f118-407d-9e52-5fa587d5c229/member/b4b2b88a-aad9-4235-a4de-3f679b9ef7d4
+  azuread_group_member.user_env_role["sim1-northwind-tst-viewer"] => 130c5e5a-7cfc-4786-93c8-7239af0a1805/member/4d8486e4-e9cb-4303-8446-711f07ad2e06
+  azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-admin"] => 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/sSwiqjvrWESJ7Oy6GlkQHlwPi7bX23NIg0dWqKmGRjc
+  azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-user"] => 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/6T-FFB3w8UOBYvrRBUrXqJO0kew7L8lDrpSevZw7BKU
+  azuread_app_role_assignment.nxcloud_contoso["sim1-contoso-viewer"] => 10e1e6b0-94d0-40ed-ab96-15d0cd5bf450/appRoleAssignment/OdWWe9YFc0mABVqHA_DC_TdTBMT-e0xBsInBxuRiV2M
+
+=== DONE ===
