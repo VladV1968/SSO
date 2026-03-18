@@ -1,4 +1,0 @@
-14:03:25.674 ERROR  You attempted to run terragrunt in a folder that does not contain a terragrunt.hcl file. Please add a terragrunt.hcl file and try again.
-
-Path: "C:\\Users\\vvolynsky\\terragrunt.hcl"
-14:03:25.675 ERROR  Unable to determine underlying exit code, so Terragrunt will exit with error code 1
