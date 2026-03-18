@@ -10,7 +10,6 @@ locals {
   # Each sim tenant is a separate Azure AD tenant created manually in the Portal.
   sim_tenant_ids = {
     sim1 = "1ebd14fa-33f0-474d-b9b8-bc87d0a0effe"  # sreazrwussim1.onmicrosoft.com
-    sim2 = "d6c50190-9f88-459a-bd01-a7cd7be3ec1d"  # sreazrwussim2.onmicrosoft.com
   }
 
   # Switch this value to deploy into a different sim tenant.

@@ -25,10 +25,6 @@ locals {
       label = "sim1"
       orgs  = var.tenant_orgs
     }
-    sim2 = {
-      label = "sim2"
-      orgs  = var.tenant_orgs
-    }
   }
 
   # Only tenants with a UPN domain in var.sim_tenant_upn_domains are provisioned.
