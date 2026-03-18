@@ -96,6 +96,56 @@ inputs = {
     sim1 = "sreazrwussim1.onmicrosoft.com"
   }
 
+  # Tenant seeds — which tenants to provision.
+  tenant_seeds = {
+    sim1 = { label = "sim1" }
+  }
+
+  # SAML Entity ID per tenant (was hardcoded in provisioner).
+  nxcloud_saml_entity_ids = {
+    sim1 = "https://test1.cloud.hwd.mx/sso/realms/default"
+  }
+
+  # Override defaults for customer deployments (uncomment as needed):
+  # environments             = ["dev", "tst", "qa", "qa2", "prd"]
+  # roles                    = ["admin", "user", "viewer"]
+  # base_domain              = "cloud.hwd.mx"
+  # group_prefix             = "sg"
+  # usage_location           = "US"
+  # nxcloud_app_display_name = "nx cloud"
+  #
+  # ── Customer deployment example ──────────────────────────────────────────
+  # CAF naming: {customer}-{provider}-{region}-{environment}-{service}-{resource}
+  #
+  # Given a customer "acme" on Azure West US with one tenant "sim1":
+  #
+  #   variables.hcl:
+  #     customer        = "acme"
+  #     provider        = "azr"
+  #     environment     = "dev"
+  #     subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  #     tenant_id       = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  #
+  #   terragrunt.hcl inputs:
+  #     tenant_seeds           = { sim1 = { label = "sim1" } }
+  #     tenant_orgs            = { widgetco = { code = "wc" } }
+  #     sim_tenant_ids         = { sim1 = "xxxxxxxx-..." }
+  #     sim_tenant_upn_domains = { sim1 = "acmeazrwussim1.onmicrosoft.com" }
+  #     base_domain            = "acme.cloud.hwd.mx"
+  #     environments           = ["dev", "stg", "prd"]
+  #     usage_location         = "DE"
+  #     nxcloud_app_display_name = "ACME Cloud"
+  #     nxcloud_saml_entity_ids  = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default" }
+  #     nxcloud_saml_login_urls  = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default" }
+  #     nxcloud_saml_acs_urls    = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default/broker/azure-ad/endpoint" }
+  #
+  #   Resulting resources:
+  #     UPN domain:      acmeazrwussim1.onmicrosoft.com       (CAF: acme-azr-wus + sim1)
+  #     Org domain:      wc.sim1.tenants.acme.cloud.hwd.mx
+  #     Security group:  sg-sim1-wc-dev-admin
+  #     User UPN:        sim1-wc-admin@acmeazrwussim1.onmicrosoft.com
+  #     Tags:            Customer = "acme", Region = "wus", Environment = "dev"
+
   tags = {
     ManagedBy   = "terragrunt"
     Module      = "ad-tenant"

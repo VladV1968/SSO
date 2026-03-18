@@ -3,26 +3,16 @@
 # Hierarchy:
 #   Tenant → Organizations → Environments → Security Groups / Users
 #
-# Naming:
-#   Tenant:   sim<n>
-#   Group:    sg-sim<n>-<code>-<env>-<role>
-#   User UPN: sim<n>-<code>-<role>@<upn_domain>
-#   Domain:   <code>.<tenant>.tenants.cloud.hwd.mx
+# Naming (configurable via variables):
+#   Group:    <group_prefix>-<tenant>-<code>-<env>-<role>
+#   User UPN: <tenant>-<code>-<role>@<upn_domain>
+#   Domain:   <code>.<tenant>.tenants.<base_domain>
 
 locals {
-  customer    = "sre"
-  provider_id = "azr"
-  region      = "wus"
-  base        = "sre-azr-wus"
-
-  environments = ["dev", "tst", "qa", "qa2", "prd"]
-  roles        = ["admin", "user", "viewer"]
-
-  # Tenant seeds — add new tenants here; all downstream resources auto-generate.
-  # Orgs are injected via var.tenant_orgs (shared across all tenants).
+  # Tenant seeds — driven by var.tenant_seeds; orgs injected from var.tenant_orgs.
   tenant_seeds = {
-    sim1 = {
-      label = "sim1"
+    for k, v in var.tenant_seeds : k => {
+      label = v.label
       orgs  = var.tenant_orgs
     }
   }
@@ -41,20 +31,20 @@ locals {
       orgs = {
         for company, org_cfg in seed.orgs : company => {
           code   = org_cfg.code
-          domain = "${org_cfg.code}.${seed.label}.tenants.cloud.hwd.mx"
+          domain = "${org_cfg.code}.${seed.label}.tenants.${var.base_domain}"
 
           envs = {
-            for env in local.environments : env => {
+            for env in var.environments : env => {
               identifier = "org-${seed.label}-${org_cfg.code}-${env}"
               cp_service = "cp-${env}"
 
               groups = {
-                for role in local.roles :
-                role => "sg-${seed.label}-${org_cfg.code}-${env}-${role}"
+                for role in var.roles :
+                role => "${var.group_prefix}-${seed.label}-${org_cfg.code}-${env}-${role}"
               }
 
               users = {
-                for role in local.roles :
+                for role in var.roles :
                 role => "${seed.label}-${org_cfg.code}-${role}@${lookup(var.sim_tenant_upn_domains, tenant_key, "${tenant_key}.onmicrosoft.com")}"
               }
             }
@@ -88,7 +78,7 @@ locals {
   flat_users = merge([
     for tenant_key, tenant in local.simulated_tenants : merge([
       for company, org in tenant.orgs : {
-        for role, upn in org.envs["dev"].users :
+        for role, upn in org.envs[var.environments[0]].users :
         "${tenant_key}-${company}-${role}" => {
           upn        = upn
           domain     = org.domain
@@ -106,7 +96,7 @@ locals {
     for tenant_key, tenant in local.simulated_tenants : merge([
       for company, org in tenant.orgs : merge([
         for env, env_cfg in org.envs : {
-          for role in local.roles :
+          for role in var.roles :
           "${tenant_key}-${company}-${env}-${role}" => {
             tenant_key = tenant_key
             company    = company
@@ -128,6 +118,7 @@ locals {
       tenant_id  = lookup(var.sim_tenant_ids, tenant_key, "")
       login_url  = lookup(var.nxcloud_saml_login_urls, tenant_key, "")
       acs_url    = lookup(var.nxcloud_saml_acs_urls, tenant_key, "")
+      entity_id  = lookup(var.nxcloud_saml_entity_ids, tenant_key, "")
     }
   }
 
@@ -135,7 +126,7 @@ locals {
   # Key: "<tenant_key>-<org>-<role>"
   flat_nxcloud_user_assignments = merge([
     for tenant_key, _ in local.simulated_tenants : {
-      for pair in setproduct(var.nxcloud_assigned_orgs, local.roles) :
+      for pair in setproduct(var.nxcloud_assigned_orgs, var.roles) :
       "${tenant_key}-${pair[0]}-${pair[1]}" => {
         tenant_key = tenant_key
         user_key   = "${tenant_key}-${pair[0]}-${pair[1]}"

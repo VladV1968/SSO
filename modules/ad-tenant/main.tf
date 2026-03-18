@@ -50,7 +50,7 @@ resource "azuread_user" "org_role" {
   password              = random_password.user[each.key].result
   force_password_change = true
   account_enabled       = true
-  usage_location        = "US"
+  usage_location        = var.usage_location
 
   lifecycle {
     ignore_changes = [password, force_password_change]
@@ -77,7 +77,7 @@ resource "azuread_group_member" "user_env_role" {
 resource "azuread_application" "nxcloud" {
   for_each = local.flat_nxcloud_apps
 
-  display_name = "nx cloud"
+  display_name = var.nxcloud_app_display_name
 
   api {
     requested_access_token_version = 2
@@ -168,9 +168,14 @@ resource "terraform_data" "nxcloud_saml_entity_id" {
         Write-Warning "sim_tenant_ids['${each.key}'] not configured - skipping SAML Entity ID provisioning"
         exit 0
       }
+      $entityId = "${each.value.entity_id}"
+      if (-not $entityId) {
+        Write-Warning "nxcloud_saml_entity_ids['${each.key}'] not configured - skipping SAML Entity ID provisioning"
+        exit 0
+      }
       $tok = (az account get-access-token --tenant $tenantId --resource-type ms-graph --query accessToken -o tsv 2>&1)
       if ($LASTEXITCODE -ne 0) { Write-Error "Failed to acquire Graph API token for tenant $tenantId"; exit 1 }
-      $body = '{"identifierUris":["https://test1.cloud.hwd.mx/sso/realms/default"]}'
+      $body = "{`"identifierUris`":[`"$entityId`"]}"
       try {
         Invoke-RestMethod -Method PATCH `
           -Uri "https://graph.microsoft.com/v1.0/applications/${self.input}" `
