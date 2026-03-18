@@ -4,7 +4,6 @@
 locals {
   global_vars = read_terragrunt_config(find_in_parent_folders("variables.hcl"))
   customer    = local.global_vars.locals.customer
-  provider_id = local.global_vars.locals.provider
   environment = local.global_vars.locals.environment
 
   # Each sim tenant is a separate Azure AD tenant created manually in the Portal.
@@ -13,7 +12,7 @@ locals {
   }
 
   # Switch this value to deploy into a different sim tenant.
-  active_sim_tenant_id = "1ebd14fa-33f0-474d-b9b8-bc87d0a0effe"
+  active_sim_tenant_id = local.sim_tenant_ids["sim1"]
 }
 
 include {
@@ -43,6 +42,10 @@ terraform {
   }
 }
 
+locals {
+  active_sim_tenant_id = "${local.active_sim_tenant_id}"
+}
+
 provider "azurerm" {
   features {
     resource_group {
@@ -54,7 +57,7 @@ provider "azurerm" {
 }
 
 provider "azuread" {
-  tenant_id = "${local.active_sim_tenant_id}"
+  tenant_id = local.active_sim_tenant_id
 }
 EOF
 }
@@ -89,7 +92,9 @@ inputs = {
     sim1 = "https://test1.cloud.hwd.mx/sso/realms/default"
   }
 
-  nxcloud_saml_acs_urls = {}
+  nxcloud_saml_acs_urls = {
+    sim1 = "https://test1.cloud.hwd.mx/sso/realms/default/broker/azure-ad/endpoint"
+  }
 
   sim_tenant_upn_domains = {
     sim1 = "sreazrwussim1.onmicrosoft.com"
