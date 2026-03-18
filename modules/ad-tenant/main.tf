@@ -107,8 +107,9 @@ resource "azuread_service_principal" "nxcloud" {
   login_url                     = each.value.login_url != "" ? each.value.login_url : null
 
   feature_tags {
-    enterprise = true
-    hide       = false
+    custom_single_sign_on = true
+    enterprise            = true
+    hide                  = false
   }
 }
 
@@ -214,8 +215,16 @@ resource "terraform_data" "nxcloud_saml_signing_cert" {
       if ($LASTEXITCODE -ne 0) { Write-Error "Token error: $tok"; exit 1 }
       $headers = @{Authorization="Bearer $($tok)"; "Content-Type"="application/json"}
       $sp = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/servicePrincipals/$env:SP_ID`?`$select=keyCredentials" -Headers $headers
-      if ($sp.keyCredentials | Where-Object { $_.usage -eq 'Sign' }) {
-        Write-Host "SAML signing cert already present on $env:SP_ID - no-op"
+      $existingSign = $sp.keyCredentials | Where-Object { $_.usage -eq 'Sign' }
+      if ($existingSign) {
+        # Cert exists — ensure it is selected as the active signing key.
+        $raw = [Convert]::FromBase64String($existingSign.customKeyIdentifier)
+        $hex = ($raw | ForEach-Object { '{0:X2}' -f $_ }) -join ''
+        $thumbBody = "{`"preferredTokenSigningKeyThumbprint`":`"$hex`"}"
+        Invoke-RestMethod -Method PATCH `
+          -Uri "https://graph.microsoft.com/v1.0/servicePrincipals/$env:SP_ID" `
+          -Headers $headers -Body $thumbBody | Out-Null
+        Write-Host "SAML signing cert already present on $env:SP_ID - ensured active key: $hex"
         exit 0
       }
       $endDate = (Get-Date).AddYears(3).AddDays(-2).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
@@ -229,6 +238,13 @@ resource "terraform_data" "nxcloud_saml_signing_cert" {
         Write-Error "addTokenSigningCertificate failed: $($Error[0])"
         exit 1
       }
+      # Set the newly created cert as the active signing key so the SAML config
+      # page renders correctly in the Azure Portal.
+      $thumbBody = "{`"preferredTokenSigningKeyThumbprint`":`"$($cert.thumbprint)`"}"
+      Invoke-RestMethod -Method PATCH `
+        -Uri "https://graph.microsoft.com/v1.0/servicePrincipals/$env:SP_ID" `
+        -Headers $headers -Body $thumbBody | Out-Null
+      Write-Host "Active signing key set for ${each.key}: $($cert.thumbprint)"
     EOT
   }
 
