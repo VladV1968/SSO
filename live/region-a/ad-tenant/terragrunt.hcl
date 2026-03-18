@@ -42,22 +42,18 @@ terraform {
   }
 }
 
-locals {
-  active_sim_tenant_id = "${local.active_sim_tenant_id}"
-}
-
 provider "azurerm" {
   features {
     resource_group {
       prevent_deletion_if_contains_resources = false
     }
   }
-  subscription_id = local.subscription_id
-  tenant_id       = local.tenant_id
+  subscription_id = "${local.global_vars.locals.subscription_id}"
+  tenant_id       = "${local.global_vars.locals.tenant_id}"
 }
 
 provider "azuread" {
-  tenant_id = local.active_sim_tenant_id
+  tenant_id = "${local.active_sim_tenant_id}"
 }
 EOF
 }
