@@ -77,7 +77,8 @@ resource "azuread_group_member" "user_env_role" {
 resource "azuread_application" "nxcloud" {
   for_each = local.flat_nxcloud_apps
 
-  display_name = var.nxcloud_app_display_name
+  display_name            = var.nxcloud_app_display_name
+  group_membership_claims = ["SecurityGroup"]
 
   api {
     requested_access_token_version = 2
@@ -252,17 +253,17 @@ resource "terraform_data" "nxcloud_saml_signing_cert" {
 }
 
 # ── NX Cloud User Assignments ────────────────────────────────────────────────
-# Assigns users from orgs listed in var.nxcloud_assigned_orgs to the NX Cloud app.
-resource "azuread_app_role_assignment" "nxcloud_user" {
-  for_each = var.users_enabled ? local.flat_nxcloud_user_assignments : {}
+# Assigns security groups from orgs listed in var.nxcloud_assigned_orgs to the NX Cloud app.
+resource "azuread_app_role_assignment" "nxcloud_group" {
+  for_each = local.flat_nxcloud_group_assignments
 
   app_role_id         = "00000000-0000-0000-0000-000000000000"
-  principal_object_id = azuread_user.org_role[each.value.user_key].object_id
+  principal_object_id = azuread_group.org_env_role[each.value.group_key].object_id
   resource_object_id  = azuread_service_principal.nxcloud[each.value.tenant_key].object_id
 
   depends_on = [
     azuread_service_principal.nxcloud,
-    azuread_user.org_role,
+    azuread_group.org_env_role,
   ]
 }
 

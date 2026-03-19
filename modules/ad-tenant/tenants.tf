@@ -122,16 +122,20 @@ locals {
     }
   }
 
-  # NX Cloud user assignments — assigns users from var.nxcloud_assigned_orgs to the enterprise app.
-  # Key: "<tenant_key>-<org>-<role>"
-  flat_nxcloud_user_assignments = merge([
-    for tenant_key, _ in local.simulated_tenants : {
-      for pair in setproduct(var.nxcloud_assigned_orgs, var.roles) :
-      "${tenant_key}-${pair[0]}-${pair[1]}" => {
-        tenant_key = tenant_key
-        user_key   = "${tenant_key}-${pair[0]}-${pair[1]}"
-      }
-      if contains(keys(var.tenant_orgs), pair[0])
-    }
+  # NX Cloud group assignments — assigns all security groups from orgs listed in nxcloud_assigned_orgs to the enterprise app.
+  # Key: "<tenant_key>-<company>-<env>-<role>"
+  flat_nxcloud_group_assignments = merge([
+    for tenant_key, tenant in local.simulated_tenants : merge([
+      for company in var.nxcloud_assigned_orgs : merge([
+        for env, env_cfg in tenant.orgs[company].envs : {
+          for role, group_name in env_cfg.groups :
+          "${tenant_key}-${company}-${env}-${role}" => {
+            tenant_key = tenant_key
+            group_key  = "${tenant_key}-${company}-${env}-${role}"
+          }
+        }
+      ]...)
+      if contains(keys(tenant.orgs), company)
+    ]...)
   ]...)
 }

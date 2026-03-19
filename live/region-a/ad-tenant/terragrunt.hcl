@@ -82,7 +82,7 @@ inputs = {
 
   # Orgs whose users get assigned to the NX Cloud enterprise app.
   # Example with contoso: nxcloud_assigned_orgs = ["contoso"]
-  nxcloud_assigned_orgs = []
+  nxcloud_assigned_orgs = ["northwind"]
 
   nxcloud_saml_login_urls = {
     sim1 = "https://test1.cloud.hwd.mx/sso/realms/default"
