@@ -1,4 +1,4 @@
-# Azure AD Tenant Module — outputs.
+ # Azure AD Tenant Module — outputs.
 
 output "simulated_tenants" {
   description = "Complete simulated_tenants hierarchy from locals."
