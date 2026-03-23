@@ -294,6 +294,10 @@ def create_user(token: str, spec: UserSpec, dry_run: bool) -> UserResult:
     if spec.last_name:
         body["surname"] = spec.last_name
 
+    # Provenance tag: marks this user as created by automation.
+    # Queryable via: $filter=employeeType eq 'delegated-user:create_delegated_users.py'
+    body["employeeType"] = "delegated-user:create_delegated_users.py"
+
     if dry_run:
         print(f"  DRY-RUN -- would POST: {json.dumps(body, indent=4)}")
         return UserResult(upn=spec.upn, status="dry-run", password=spec.password)
