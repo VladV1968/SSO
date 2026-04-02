@@ -44,7 +44,6 @@ resource "azuread_user" "org_role" {
   for_each = var.users_enabled ? local.flat_users : {}
 
   user_principal_name   = each.value.upn
-  mail                  = each.value.upn
   display_name          = "${title(each.value.role)} – ${title(each.value.company)} (${each.value.tenant_key})"
   mail_nickname         = "${each.value.tenant_key}-${each.value.code}-${each.value.role}"
   password              = random_password.user[each.key].result
@@ -90,6 +89,16 @@ resource "azuread_application" "nxcloud" {
     redirect_uris = each.value.acs_url != "" ? [each.value.acs_url] : []
   }
 
+  # Emit group display names (e.g. sg-sim1-nw-dev-admin) instead of object IDs
+  # in the SAML groups claim. Custom claims mapping policies cannot override this
+  # behaviour — optional_claims with cloud_displayname is the correct mechanism.
+  optional_claims {
+    saml2_token {
+      name                  = "groups"
+      additional_properties = ["cloud_displayname"]
+    }
+  }
+
   tags = ["terraform", "nxcloud", "saml"]
 
   lifecycle {
@@ -115,7 +124,8 @@ resource "azuread_service_principal" "nxcloud" {
 }
 
 # ── NX Cloud SAML Claims Mapping Policy ──────────────────────────────────────
-# Maps: email, firstName, lastName, NameID (UPN), groups.
+# Maps: email, firstName, lastName, NameID (UPN).
+# Groups are handled separately via optional_claims on azuread_application.
 resource "azuread_claims_mapping_policy" "nxcloud_saml" {
   for_each = local.flat_nxcloud_apps
 
@@ -134,11 +144,10 @@ resource "azuread_claims_mapping_policy" "nxcloud_saml" {
           Source        = "user"
           ID            = "userprincipalname"
         },
-        {
-          SamlClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups"
-          Source        = "user"
-          ID            = "groups"
-        }
+        # Groups claim is intentionally omitted here. It is handled via
+        # optional_claims { saml2_token { name = "groups", additional_properties = ["cloud_displayname"] } }
+        # on the azuread_application resource, which emits display names instead of object IDs.
+        # Defining it here alongside optional_claims causes claim conflicts in Entra.
       ]
     }
   })]
@@ -265,6 +274,47 @@ resource "azuread_app_role_assignment" "nxcloud_group" {
     azuread_service_principal.nxcloud,
     azuread_group.org_env_role,
   ]
+}
+
+# ── External Security Group Assignments ──────────────────────────────────────
+# Assigns pre-existing Azure AD security groups to the NX Cloud enterprise app.
+# Use for groups not managed by this module (e.g. existing RBAC or real-user groups).
+# Keycloak-sso will create a matching realm role and SAML mapper via external_group_display_names output.
+resource "azuread_app_role_assignment" "nxcloud_external_group" {
+  for_each = var.sso_external_groups
+
+  app_role_id         = "00000000-0000-0000-0000-000000000000"
+  principal_object_id = each.value.object_id
+  resource_object_id  = azuread_service_principal.nxcloud[each.value.tenant_key].object_id
+
+  depends_on = [azuread_service_principal.nxcloud]
+}
+
+# ── External User Assignments ─────────────────────────────────────────────────
+# Assigns pre-existing Azure AD users directly to the NX Cloud enterprise app.
+# These users authenticate via SSO without requiring group membership.
+# Note: Keycloak roles are still assigned via group membership in the SAML assertion.
+resource "azuread_app_role_assignment" "nxcloud_external_user" {
+  for_each = var.sso_external_users
+
+  app_role_id         = "00000000-0000-0000-0000-000000000000"
+  principal_object_id = each.value.object_id
+  resource_object_id  = azuread_service_principal.nxcloud[each.value.tenant_key].object_id
+
+  depends_on = [azuread_service_principal.nxcloud]
+}
+
+# ── Role-Based Group Memberships for Existing Users ───────────────────────────
+# Adds pre-existing Azure AD users to managed role security groups.
+# Grants SSO access and the Keycloak role associated with that group.
+# group_key must reference a key in local.flat_groups (e.g. "sim1-northwind-dev-admin").
+resource "azuread_group_member" "sso_role_user" {
+  for_each = var.sso_role_user_memberships
+
+  group_object_id  = azuread_group.org_env_role[each.value.group_key].object_id
+  member_object_id = each.value.user_object_id
+
+  depends_on = [azuread_group.org_env_role]
 }
 
 

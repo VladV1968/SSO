@@ -50,3 +50,17 @@ output "flat_users" {
   description = "Flattened user map from the hierarchy."
   value       = local.flat_users
 }
+
+output "nxcloud_app_client_ids" {
+  description = "Map of tenant_key → NX Cloud application client_id (used to build Azure AD federation metadata URLs)."
+  value = {
+    for key, app in azuread_application.nxcloud : key => app.client_id
+  }
+}
+
+output "external_group_display_names" {
+  description = "Map of external group key → display name. Pass to keycloak-sso for realm role and SAML mapper creation."
+  value = {
+    for k, g in var.sso_external_groups : k => g.display_name
+  }
+}

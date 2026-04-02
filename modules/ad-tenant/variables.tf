@@ -131,6 +131,50 @@ variable "nxcloud_assigned_orgs" {
   default     = []
 }
 
+# ── External SSO Assignments ─────────────────────────────────────────────────
+
+variable "sso_external_groups" {
+  description = <<-EOT
+    Existing Azure AD security groups to assign to the NX Cloud enterprise app and expose in Keycloak.
+    Map of unique key → { object_id, display_name, tenant_key }.
+    Each entry creates an app role assignment and an output entry consumed by keycloak-sso
+    to create a corresponding realm role and SAML attribute-to-role mapper.
+  EOT
+  type = map(object({
+    object_id    = string
+    display_name = string
+    tenant_key   = string
+  }))
+  default = {}
+}
+
+variable "sso_external_users" {
+  description = <<-EOT
+    Existing Azure AD users to assign directly to the NX Cloud enterprise app.
+    Map of unique key → { object_id, tenant_key }.
+    Use when individual users (not managed via groups) need direct SSO access.
+  EOT
+  type = map(object({
+    object_id  = string
+    tenant_key = string
+  }))
+  default = {}
+}
+
+variable "sso_role_user_memberships" {
+  description = <<-EOT
+    Add existing Azure AD users to managed role security groups (provisioned by this module).
+    Map of unique key → { user_object_id, group_key }.
+    group_key must match a key in local.flat_groups (e.g. "sim1-northwind-dev-admin").
+    Grants SSO access and Keycloak role assignment via the group's existing app assignment and mapper.
+  EOT
+  type = map(object({
+    user_object_id = string
+    group_key      = string
+  }))
+  default = {}
+}
+
 # ── Metadata ─────────────────────────────────────────────────────────────────
 
 variable "tags" {

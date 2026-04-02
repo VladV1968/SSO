@@ -2,56 +2,24 @@
 # Deploys the ad-tenant module into the active sim tenant.
 
 locals {
-  global_vars = read_terragrunt_config(find_in_parent_folders("variables.hcl"))
-  customer    = local.global_vars.locals.customer
-  environment = local.global_vars.locals.environment
-
-  # Each sim tenant is a separate Azure AD tenant created manually in the Portal.
-  sim_tenant_ids = {
-    sim1 = "1ebd14fa-33f0-474d-b9b8-bc87d0a0effe"  # sreazrwussim1.onmicrosoft.com
-  }
-
-  # Switch this value to deploy into a different sim tenant.
-  active_sim_tenant_id = local.sim_tenant_ids["sim1"]
+  global_vars          = read_terragrunt_config(find_in_parent_folders("variables.hcl"))
+  customer             = local.global_vars.locals.customer
+  environment          = local.global_vars.locals.environment
+  sim_tenant_ids       = local.global_vars.locals.sim_tenant_ids
+  active_sim_tenant_id = local.global_vars.locals.active_sim_tenant_id
 }
 
 include {
   path = find_in_parent_folders("root.hcl")
 }
 
-# Override root.hcl provider.tf to add azuread + random providers.
+# Adds azuread + random providers targeting the sim tenant.
+# Uses a distinct filename (ad_provider.tf) to avoid being overwritten by root.hcl's
+# generate "provider" block which also outputs provider.tf.
 generate "ad_provider" {
-  path      = "provider.tf"
+  path      = "ad_provider.tf"
   if_exists = "overwrite"
   contents  = <<-EOF
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 4.35.0"
-    }
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "~> 2.47"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = "~> 3.5"
-    }
-  }
-}
-
-provider "azurerm" {
-  features {
-    resource_group {
-      prevent_deletion_if_contains_resources = false
-    }
-  }
-  subscription_id = "${local.global_vars.locals.subscription_id}"
-  tenant_id       = "${local.global_vars.locals.tenant_id}"
-}
-
 provider "azuread" {
   tenant_id = "${local.active_sim_tenant_id}"
 }
