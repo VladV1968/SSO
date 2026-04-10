@@ -83,7 +83,7 @@ inputs = {
   # Or store in a secrets manager and reference here.
   azure_ad_signing_certificate = get_env("TF_VAR_azure_ad_signing_certificate", "")
 
-  idp_alias        = "azure-ad"
+  idp_alias        = "4f97ed66-25db-427d-b660-a7fae5f337c4"
   idp_display_name = "Azure AD (sim1)"
 
   # All security groups provisioned by ad-tenant — drives role creation and mappers.
