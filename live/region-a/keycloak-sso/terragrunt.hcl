@@ -22,7 +22,7 @@ dependency "ad_tenant" {
   mock_outputs_merge_strategy_with_state  = "shallow"
   mock_outputs = {
     group_display_names          = { "mock-key" = "mock-group" }
-    nxcloud_app_client_ids       = { sim1 = "00000000-0000-0000-0000-000000000000" }
+    nxcloud_app_client_ids       = { sim2 = "00000000-0000-0000-0000-000000000000" }
     external_group_display_names = {}
   }
 }
@@ -73,7 +73,7 @@ inputs = {
 
   # Retrieve the Azure AD SAML signing certificate after ad-tenant apply:
   #   SP_ID=<service-principal-object-id>
-  #   TENANT_ID=1ebd14fa-33f0-474d-b9b8-bc87d0a0effe
+  #   TENANT_ID=027de348-f78d-44e5-93a7-f0472d5cb35a
   #   az rest --method GET \
   #     --url "https://graph.microsoft.com/v1.0/servicePrincipals/$SP_ID/tokenSigningCertificates" \
   #     --headers "Authorization=Bearer $(az account get-access-token --tenant $TENANT_ID --resource-type ms-graph --query accessToken -o tsv)" \
@@ -84,7 +84,7 @@ inputs = {
   azure_ad_signing_certificate = get_env("TF_VAR_azure_ad_signing_certificate", "")
 
   idp_alias        = "4f97ed66-25db-427d-b660-a7fae5f337c4"
-  idp_display_name = "Azure AD (sim1)"
+  idp_display_name = "Azure AD (${local.tenant_key})"
 
   # All security groups provisioned by ad-tenant — drives role creation and mappers.
   group_display_names = dependency.ad_tenant.outputs.group_display_names

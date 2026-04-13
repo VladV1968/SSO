@@ -12,14 +12,14 @@ locals {
   # ── SIM tenants ─────────────────────────────────────────────────────────────
   # Each sim tenant is a separate Azure AD tenant created manually in the Portal.
   sim_tenant_ids = {
-    sim1 = "1ebd14fa-33f0-474d-b9b8-bc87d0a0effe"  # sreazrwussim1.onmicrosoft.com
+    sim2 = "027de348-f78d-44e5-93a7-f0472d5cb35a"  # sreazrwussim2.onmicrosoft.com
   }
 
   # Active sim tenant for this deployment. Switch to target a different tenant.
-  active_sim_tenant_key = "sim1"
+  active_sim_tenant_key = "sim2"
   active_sim_tenant_id  = local.sim_tenant_ids[local.active_sim_tenant_key]
 
   # ── Keycloak ─────────────────────────────────────────────────────────────────
-  keycloak_url = "https://test1.cloud.hwd.mx/sso"
+  keycloak_url = "https://auth.alicloud-stage-sre.nx-demo.com/auth"
   keycloak_realm = "default"
 }

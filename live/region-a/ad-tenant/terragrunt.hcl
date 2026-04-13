@@ -53,25 +53,25 @@ inputs = {
   nxcloud_assigned_orgs = ["northwind"]
 
   nxcloud_saml_login_urls = {
-    sim1 = "https://test1.cloud.hwd.mx/sso/realms/default"
+    sim2 = "https://test1.cloud.hwd.mx/sso/realms/default"
   }
 
   nxcloud_saml_acs_urls = {
-    sim1 = "https://test1.cloud.hdw.mx/sso/realms/default/broker/4f97ed66-25db-427d-b660-a7fae5f337c4/endpoint"
+    sim2 = "https://test1.cloud.hdw.mx/sso/realms/default/broker/4f97ed66-25db-427d-b660-a7fae5f337c4/endpoint"
   }
 
   sim_tenant_upn_domains = {
-    sim1 = "sreazrwussim1.onmicrosoft.com"
+    sim2 = "sreazrwussim2.onmicrosoft.com"
   }
 
   # Tenant seeds — which tenants to provision.
   tenant_seeds = {
-    sim1 = { label = "sim1" }
+    sim2 = { label = "sim2" }
   }
 
   # SAML Entity ID per tenant (was hardcoded in provisioner).
   nxcloud_saml_entity_ids = {
-    sim1 = "https://test1.cloud.hdw.mx/sso/realms/default"
+    sim2 = "https://test1.cloud.hdw.mx/sso/realms/default"
   }
 
   # Override defaults for customer deployments (uncomment as needed):
@@ -85,7 +85,7 @@ inputs = {
   # ── Customer deployment example ──────────────────────────────────────────
   # CAF naming: {customer}-{provider}-{region}-{environment}-{service}-{resource}
   #
-  # Given a customer "acme" on Azure West US with one tenant "sim1":
+  # Given a customer "acme" on Azure West US with one tenant "sim2":
   #
   #   variables.hcl:
   #     customer        = "acme"
@@ -95,23 +95,23 @@ inputs = {
   #     tenant_id       = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   #
   #   terragrunt.hcl inputs:
-  #     tenant_seeds           = { sim1 = { label = "sim1" } }
+  #     tenant_seeds           = { sim2 = { label = "sim2" } }
   #     tenant_orgs            = { widgetco = { code = "wc" } }
-  #     sim_tenant_ids         = { sim1 = "xxxxxxxx-..." }
-  #     sim_tenant_upn_domains = { sim1 = "acmeazrwussim1.onmicrosoft.com" }
+  #     sim_tenant_ids         = { sim2 = "xxxxxxxx-..." }
+  #     sim_tenant_upn_domains = { sim2 = "acmeazrwussim2.onmicrosoft.com" }
   #     base_domain            = "acme.cloud.hwd.mx"
   #     environments           = ["dev", "stg", "prd"]
   #     usage_location         = "DE"
   #     nxcloud_app_display_name = "ACME Cloud"
-  #     nxcloud_saml_entity_ids  = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default" }
-  #     nxcloud_saml_login_urls  = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default" }
-  #     nxcloud_saml_acs_urls    = { sim1 = "https://acme.cloud.hwd.mx/sso/realms/default/broker/azure-ad/endpoint" }
+  #     nxcloud_saml_entity_ids  = { sim2 = "https://acme.cloud.hwd.mx/sso/realms/default" }
+  #     nxcloud_saml_login_urls  = { sim2 = "https://acme.cloud.hwd.mx/sso/realms/default" }
+  #     nxcloud_saml_acs_urls    = { sim2 = "https://acme.cloud.hwd.mx/sso/realms/default/broker/azure-ad/endpoint" }
   #
   #   Resulting resources:
-  #     UPN domain:      acmeazrwussim1.onmicrosoft.com       (CAF: acme-azr-wus + sim1)
-  #     Org domain:      wc.sim1.tenants.acme.cloud.hwd.mx
-  #     Security group:  sg-sim1-wc-dev-admin
-  #     User UPN:        sim1-wc-admin@acmeazrwussim1.onmicrosoft.com
+  #     UPN domain:      acmeazrwussim2.onmicrosoft.com       (CAF: acme-azr-wus + sim2)
+  #     Org domain:      wc.sim2.tenants.acme.cloud.hwd.mx
+  #     Security group:  sg-sim2-wc-dev-admin
+  #     User UPN:        sim2-wc-admin@acmeazrwussim2.onmicrosoft.com
   #     Tags:            Customer = "acme", Region = "wus", Environment = "dev"
 
   tags = {
