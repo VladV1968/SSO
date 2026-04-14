@@ -28,29 +28,9 @@ dependency "ad_tenant" {
 }
 
 generate "keycloak_provider" {
-  path      = "provider.tf"
+  path      = "keycloak_provider.tf"
   if_exists = "overwrite"
   contents  = <<-EOF
-    terraform {
-      required_version = ">= 1.0"
-      required_providers {
-        azurerm = {
-          source  = "hashicorp/azurerm"
-          version = "~> 4.35.0"
-        }
-        keycloak = {
-          source  = "mrparkers/keycloak"
-          version = "~> 4.4"
-        }
-      }
-    }
-
-    provider "azurerm" {
-      features {}
-      subscription_id = "${local.global_vars.locals.subscription_id}"
-      tenant_id       = "${local.global_vars.locals.tenant_id}"
-    }
-
     provider "keycloak" {
       client_id = "admin-cli"
       url       = "${local.keycloak_url}"
