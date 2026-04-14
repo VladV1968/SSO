@@ -71,7 +71,7 @@ inputs = {
 
   # SAML Entity ID per tenant (was hardcoded in provisioner).
   nxcloud_saml_entity_ids = {
-    sim2 = "https://test1.cloud.hdw.mx/sso/realms/default"
+    sim2 = "https://test1.cloud.hdw.mx/sso/realms/sim2"
   }
 
   # Override defaults for customer deployments (uncomment as needed):
