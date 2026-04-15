@@ -1,93 +1,327 @@
-# sso-azure
+# SSO — Azure AD + Keycloak Infrastructure
 
+Terraform/Terragrunt IaC for the NX Cloud SSO integration. Provisions the full identity stack: Azure AD simulated tenants (Entra ID), a Keycloak SAML broker, and all supporting resources that wire them together.
 
+## Architecture
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-* [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+### Identity flow
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.nxvms.dev/sre/sso-azure.git
-git branch -M master
-git push -uf origin master
+ ┌─────────────────────────────────────────────────────────────────┐
+ │  User                                                           │
+ │    │  1. Access NX Cloud                                        │
+ │    ▼                                                            │
+ │  NX Cloud  ──OIDC──►  Keycloak (realm: default)                 │
+ │                           │  2. Redirect to Azure AD (SAML)     │
+ │                           ▼                                     │
+ │                        Azure AD (Enterprise App)                │
+ │                           │  3. User authenticates              │
+ │                           │  4. SAML assertion → Keycloak       │
+ │                           ▼                                     │
+ │                        Keycloak                                 │
+ │                           │  5. Attribute importers fire        │
+ │                           │     email, firstName, lastName      │
+ │                           │  6. Group-to-role mappers fire      │
+ │                           │     Azure AD group → Keycloak role  │
+ │                           │  7. OIDC token issued to NX Cloud   │
+ │                           ▼                                     │
+ │                        NX Cloud (authenticated)                 │
+ └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Integrate with your tools
+### SAML binding detail
 
-* [Set up project integrations](https://gitlab.nxvms.dev/sre/sso-azure/-/settings/integrations)
+- **SP entity ID**: `{keycloak_url}/realms/{realm}` — identifies Keycloak to Azure AD
+- **ACS URL**:      `{keycloak_url}/realms/{realm}/broker/{idp_alias}/endpoint` — where Azure AD POSTs the SAML assertion
+- **SSO endpoint**: `https://login.microsoftonline.com/{sim_tenant_id}/saml2`
+- **Binding**:       HTTP-POST for both AuthnRequest and Response
+- **Signature**:     Azure AD signs the response; Keycloak validates against the app's SAML signing certificate
+- **NameID**: UPN    (`user@domain.onmicrosoft.com`) via claims mapping policy
+- **Sync mode**:     `FORCE` — Keycloak re-imports user attributes on every login
 
-## Collaborate with your team
+### Identity hierarchy (per SIM tenant)
 
-* [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+```
+Azure AD Tenant (sim2 — sreazrwussim2.onmicrosoft.com)
+└── NX Cloud Enterprise App (SAML SSO)
+    ├── Service Principal
+    │   ├── SAML claims mapping policy  (email, firstName, lastName, NameID)
+    │   ├── SAML token signing certificate
+    │   └── App role assignments (security groups)
+    └── Security Groups  [sg-{tenant}-{org}-{env}-{role}]
+        ├── sg-sim2-nw-dev-admin
+        ├── sg-sim2-nw-dev-user
+        ├── sg-sim2-nw-dev-viewer
+        ├── sg-sim2-nw-tst-*  (×3)
+        ├── sg-sim2-nw-qa-*   (×3)
+        ├── sg-sim2-nw-qa2-*  (×3)
+        └── sg-sim2-nw-prd-*  (×3)
 
-## Test and Deploy
+Keycloak (realm: default)
+└── Azure AD SAML IdP  [alias: {idp_alias}]
+    ├── Attribute importers  (email → email, firstName, lastName)
+    ├── Realm roles          [sim2-northwind-{env}-{role}]  ×15
+    └── SAML attribute-to-role mappers  ×15
+        └── groups claim display name → realm role
+```
 
-Use the built-in continuous integration in GitLab.
+## Repository structure
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```
+SSO/
+├── variables.hcl                     # Global: subscription, tenants, Keycloak URL
+├── root.hcl                          # Remote state (Azure Blob), provider generation
+├── modules/
+│   ├── ad-tenant/                    # Azure AD provisioning module
+│   │   ├── main.tf                   # Groups, users, enterprise app, SP, cert, claims policy
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── locals.tf
+│   └── keycloak-sso/                 # Keycloak SAML broker module
+│       ├── main.tf                   # SAML IdP, attribute importers, roles, mappers
+│       ├── variables.tf
+│       └── outputs.tf
+└── live/
+    └── region-a/
+        ├── ad-tenant/
+        │   └── terragrunt.hcl        # Org/tenant config, SAML URLs, tags
+        └── keycloak-sso/
+            └── terragrunt.hcl        # IdP alias, dependency on ad-tenant outputs
+```
 
-***
+## Deployed resources
 
-# Editing this README
+### Module: `ad-tenant`
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Manages the Azure AD (Entra ID) side. One invocation targets one simulated tenant.
 
-## Suggestions for a good README
+| Resource                       | Type                                                        | Count (default config)                             |
+|--------------------------------|-------------------------------------------------------------|----------------------------------------------------|
+| Security groups                | `azuread_group`                                             | `tenants × orgs × envs × roles` = 1×1×5×3 = **15** |
+| Users                          | `azuread_user`                                              | `tenants × orgs × roles` = 1×1×3 = **3**           |
+| Group memberships              | `azuread_group_member`                                      | `tenants × orgs × envs × roles` = **15**           |
+| Enterprise application         | `azuread_application`                                       | **1 per tenant**                                   |
+| Service principal              | `azuread_service_principal`                                 | **1 per tenant**                                   |
+| SAML claims mapping policy     | `azuread_claims_mapping_policy`                             | **1 per tenant**                                   |
+| Claims policy assignment       | `azuread_service_principal_claims_mapping_policy_assignment`| **1 per tenant**                                   |
+| App role assignments (groups)  | `azuread_app_role_assignment`                               | **15 per tenant** (all org groups)                 |
+| SAML entity ID                 | `terraform_data` + Graph API `PATCH`                        | **1 per tenant** (local-exec)                      |
+| SAML token signing certificate | `terraform_data` + Graph API `POST`                         | **1 per tenant** (local-exec)                      |
+| Random passwords               | `random_password`                                           | **3**                                              |
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+> Claims include: `email` (mail), `firstName` (givenname), `lastName` (surname), `NameID` (userprincipalname). Groups are emitted as display names via `optional_claims` (not through the claims mapping policy).
 
-## Name
-Choose a self-explaining name for your project.
+### Module: `keycloak-sso`
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Manages the Keycloak side. One invocation configures one SIM tenant's IdP in the realm.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+| Resource                        | Type                                                   | Count (default config)             |
+|---------------------------------|--------------------------------------------------------|------------------------------------|
+| Azure AD SAML Identity Provider | `keycloak_saml_identity_provider`                      | **1**                              |
+| Attribute importers             | `keycloak_attribute_importer_identity_provider_mapper` | **3** (email, firstName, lastName) |
+| Realm roles                     | `keycloak_role`                                        | **15** (one per security group)    |
+| SAML attribute-to-role mappers  | `keycloak_attribute_to_role_identity_provider_mapper`  | **15**                             |
+ 
+## Prerequisites
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 1. Azure AD tenants
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Each SIM tenant must be manually created in the Azure Portal before first apply. Add the tenant ID and UPN domain to `variables.hcl`:
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+```hcl
+sim_tenant_ids = {
+  sim2 = "027de348-f78d-44e5-93a7-f0472d5cb35a"
+}
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+And in `live/region-a/ad-tenant/terragrunt.hcl`:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```hcl
+sim_tenant_upn_domains = {
+  sim2 = "sreazrwussim2.onmicrosoft.com"
+}
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### 2. Azure CLI authentication
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Two tenants require authentication: the management tenant (for state backend) and each SIM tenant (for `azuread` provider and Graph API calls):
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```bash
+# Management tenant (state backend + azurerm provider)
+az login
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+# SIM tenant (azuread provider + local-exec provisioners)
+az login --tenant 027de348-f78d-44e5-93a7-f0472d5cb35a
+```
 
-## License
-For open source projects, say how it is licensed.
+### 3. Keycloak
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- Keycloak instance accessible at `keycloak_url` (see `variables.hcl`)
+- Realm already created (the module configures an existing realm, it does not create one)
+
+### 4. Tools
+
+| Tool       | Version         | Notes                                        |
+|------------|-----------------|----------------------------------------------|
+| Terraform  | >= 1.0          |                                              |
+| Terragrunt | >= 0.99         | Uses new CLI: `terragrunt run --all apply`   |
+| Azure CLI  | Latest          | Token acquisition for Graph API provisioners |
+| PowerShell | >= 7.0 (`pwsh`) | Local-exec provisioner interpreter           |
+| `jq`       | Latest          | Certificate extraction from Graph API        |
+
+## Deployment
+
+### Environment variables
+
+```bash
+# Keycloak admin credentials
+export KEYCLOAK_USER=admin
+export KEYCLOAK_PASSWORD=<password>
+
+# Azure AD SAML signing certificate (retrieve after ad-tenant apply — see below)
+export TF_VAR_azure_ad_signing_certificate=<base64-cert>
+```
+
+### Step 1 — Apply `ad-tenant`
+
+Provisions security groups, users, enterprise app, and SAML configuration in Azure AD:
+
+```bash
+cd live/region-a/ad-tenant
+
+terragrunt init
+terragrunt plan
+terragrunt apply
+```
+
+> Azure AD has eventual consistency. `group replication not yet complete` errors on first apply are transient — re-run `terragrunt apply` to self-resolve.
+
+### Step 2 — Retrieve the SAML signing certificate
+
+The NX Cloud enterprise app's SAML signing certificate is created by the `ad-tenant` provisioner. Retrieve it using the federation metadata XML for the app:
+
+```bash
+TENANT_ID=027de348-f78d-44e5-93a7-f0472d5cb35a
+CLIENT_ID=$(cd live/region-a/ad-tenant && terragrunt output -json nxcloud_app_client_ids | jq -r '.sim2')
+
+# Fetch the app-specific federation metadata and extract the signing cert
+curl -s "https://login.microsoftonline.com/${TENANT_ID}/federationmetadata/2007-06/federationmetadata.xml?appid=${CLIENT_ID}" \
+  | grep -oP '(?<=<X509Certificate>)[^<]+' \
+  | head -1
+```
+
+Or using PowerShell:
+
+```powershell
+$tenantId = "027de348-f78d-44e5-93a7-f0472d5cb35a"
+$clientId = "<client-id-from-ad-tenant-output>"
+$url = "https://login.microsoftonline.com/$tenantId/federationmetadata/2007-06/federationmetadata.xml?appid=$clientId"
+$raw = (Invoke-WebRequest -Uri $url -UseBasicParsing).Content
+[regex]::Match($raw, '(?<=<X509Certificate>)[^<]+').Value
+```
+
+Export the result:
+
+```bash
+export TF_VAR_azure_ad_signing_certificate=<base64-value>
+```
+
+> The value is a base64 DER certificate without PEM headers. Do not commit it to source control.
+
+### Step 3 — Apply `keycloak-sso`
+
+Configures the SAML IdP, attribute mappers, realm roles, and group-to-role mappers in Keycloak:
+
+```bash
+cd live/region-a/keycloak-sso
+
+terragrunt init
+terragrunt plan
+terragrunt apply
+```
+
+The `dependency "ad_tenant"` block reads `group_display_names` and `nxcloud_app_client_ids` directly from the ad-tenant state — no manual output copying required.
+
+### Deploy all at once
+
+Terragrunt respects dependency ordering automatically:
+
+```bash
+cd live/region-a
+
+export KEYCLOAK_USER=admin
+export KEYCLOAK_PASSWORD=<password>
+export TF_VAR_azure_ad_signing_certificate=<base64-cert>
+
+terragrunt run --all apply --non-interactive
+```
+
+## Key operational notes
+
+### IdP alias and ACS URL coupling
+
+The `idp_alias` in `keycloak-sso/terragrunt.hcl` is the path segment in Keycloak's ACS URL:
+
+```
+{keycloak_url}/realms/{realm}/broker/{idp_alias}/endpoint
+```
+
+This URL is registered in Azure AD (`nxcloud_saml_acs_urls`). Both must match. Changing `idp_alias` after initial deploy requires re-applying both modules.
+
+### SAML entity ID
+
+The SP entity ID (`{keycloak_url}/realms/{realm}`) is registered in Azure AD as `identifier_uris` via a `local-exec` Graph API PATCH (the `azuread` provider rejects unverified domains). If the provisioner fails, re-running `terragrunt apply` is safe — the script is idempotent.
+
+### First broker login
+
+On first SSO login for a user, Keycloak runs the `first broker login` flow. If a Keycloak user with the same email already exists (e.g. from a stale state after entity ID changes), the flow asks for local Keycloak credentials. Fix by deleting the stale Keycloak user via the admin API or console and re-authenticating:
+
+```bash
+KEYCLOAK_URL=https://auth.alicloud-stage-sre.nx-demo.com/auth
+
+TOKEN=$(curl -s -X POST "$KEYCLOAK_URL/realms/master/protocol/openid-connect/token" \
+  -d "grant_type=password&client_id=admin-cli&username=$KEYCLOAK_USER&password=$KEYCLOAK_PASSWORD" \
+  | jq -r '.access_token')
+
+# Find stale user
+curl -s "$KEYCLOAK_URL/admin/realms/default/users?search=<email>" \
+  -H "Authorization: Bearer $TOKEN" | jq '.[].id'
+
+# Delete stale user
+curl -s -X DELETE "$KEYCLOAK_URL/admin/realms/default/users/<user-id>" \
+  -H "Authorization: Bearer $TOKEN"
+```
+
+### Signing certificate rotation
+
+1. Retrieve the new certificate (see Step 2 above).
+2. Update `TF_VAR_azure_ad_signing_certificate`.
+3. Run `terragrunt apply` from `live/region-a/keycloak-sso`.
+
+No downtime if both old and new certificates are briefly active in Azure AD during rotation.
+
+### Syncing groups after ad-tenant changes
+
+After adding or removing security groups in `ad-tenant`, re-apply `keycloak-sso` to sync realm roles and SAML mappers. The dependency block picks up updated outputs automatically:
+
+```bash
+cd live/region-a/keycloak-sso && terragrunt apply
+```
+
+### Adding a new SIM tenant
+
+1. Create the tenant manually in Azure Portal.
+2. Add the tenant ID to `variables.hcl` (`sim_tenant_ids`) and set it as `active_sim_tenant_key`.
+3. Add the UPN domain to `ad-tenant/terragrunt.hcl` (`sim_tenant_upn_domains`, `tenant_seeds`, `nxcloud_saml_*_urls`).
+4. Run `terragrunt run --all apply` from `live/region-a`.
+
+## Remote state
+
+State is stored in Azure Blob Storage (`root.hcl`):
+
+| Setting           | Value                                      |
+|-------------------|--------------------------------------------|
+| Resource group    | `rg-sre-azr-eus-dev-str-tf`                |
+| Storage account   | `sreazreusdevtfstr`                        |
+| Container         | `sreazreusdevstrtfcontainer`               |
+| State key pattern | `live/region-a/{module}/terraform.tfstate` |
