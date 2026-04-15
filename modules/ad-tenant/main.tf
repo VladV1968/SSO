@@ -46,6 +46,8 @@ resource "azuread_user" "org_role" {
   user_principal_name   = each.value.upn
   display_name          = "${title(each.value.role)} – ${title(each.value.company)} (${each.value.tenant_key})"
   mail_nickname         = "${each.value.tenant_key}-${each.value.code}-${each.value.role}"
+  given_name            = title(each.value.role)
+  surname               = title(each.value.company)
   password              = random_password.user[each.key].result
   force_password_change = true
   account_enabled       = true

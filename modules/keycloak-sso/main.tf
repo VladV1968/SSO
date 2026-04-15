@@ -24,7 +24,7 @@ resource "keycloak_saml_identity_provider" "azure_ad" {
   enabled      = true
 
   # Azure AD SAML endpoints for the SIM tenant.
-  entity_id              = "https://sts.windows.net/${var.azure_tenant_id}/"
+  entity_id              = "${var.keycloak_url}/realms/${var.realm}"
   single_sign_on_service_url = "https://login.microsoftonline.com/${var.azure_tenant_id}/saml2"
   single_logout_service_url  = "https://login.microsoftonline.com/${var.azure_tenant_id}/saml2"
 

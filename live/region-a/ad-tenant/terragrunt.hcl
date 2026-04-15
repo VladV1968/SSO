@@ -53,11 +53,11 @@ inputs = {
   nxcloud_assigned_orgs = ["northwind"]
 
   nxcloud_saml_login_urls = {
-    sim2 = "https://test1.cloud.hwd.mx/sso/realms/default"
+    sim2 = "https://auth.alicloud-stage-sre.nx-demo.com/auth/realms/default"
   }
 
   nxcloud_saml_acs_urls = {
-    sim2 = "https://test1.cloud.hdw.mx/sso/realms/default/broker/4f97ed66-25db-427d-b660-a7fae5f337c4/endpoint"
+    sim2 = "https://auth.alicloud-stage-sre.nx-demo.com/auth/realms/default/broker/4f97ed66-25db-427d-b660-a7fae5f337c4/endpoint"
   }
 
   sim_tenant_upn_domains = {
@@ -71,7 +71,7 @@ inputs = {
 
   # SAML Entity ID per tenant (was hardcoded in provisioner).
   nxcloud_saml_entity_ids = {
-    sim2 = "https://test1.cloud.hdw.mx/sso/realms/sim2"
+    sim2 = "https://auth.alicloud-stage-sre.nx-demo.com/auth/realms/default"
   }
 
   # Override defaults for customer deployments (uncomment as needed):
