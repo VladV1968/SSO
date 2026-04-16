@@ -1,0 +1,5 @@
+email,first_name,last_name,groups
+alice@example.com,Alice,Smith,sg-nw-dev-admin
+bob@example.com,Bob,Jones,"sg-nw-dev-user,sg-nw-tst-user"
+carol@example.com,Carol,White,ALL
+dave@example.com,Dave,Black,

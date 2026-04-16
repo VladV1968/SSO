@@ -1,101 +1,86 @@
-# Keycloak SSO Module — input variables.
-# Configures Azure AD as a SAML Identity Provider in a Keycloak realm,
-# with attribute mappers and role mappings for all provisioned security groups.
+# Keycloak Realm Module — input variables.
+# Realm name = tenant identifier. No tenant prefix inside any resource name.
 
-# ── Keycloak connection ───────────────────────────────────────────────────────
-
-variable "keycloak_url" {
-  description = "Base URL of the Keycloak server (e.g. https://test1.cloud.hwd.mx/sso)."
-  type        = string
-}
+# ── Realm ─────────────────────────────────────────────────────────────────────
 
 variable "realm" {
-  description = "Keycloak realm to configure (e.g. default)."
-  type        = string
-  default     = "default"
-}
-
-# ── Azure AD IdP ──────────────────────────────────────────────────────────────
-
-variable "idp_alias" {
-  description = "Keycloak alias for the Azure AD SAML IdP. Must match the broker endpoint path in the ACS URL."
-  type        = string
-  default     = "azure-ad"
-}
-
-variable "idp_display_name" {
-  description = "Human-readable label for the Azure AD IdP in the Keycloak login UI."
-  type        = string
-  default     = "Azure AD"
-}
-
-variable "azure_tenant_id" {
-  description = "Azure AD tenant GUID for the SIM tenant."
+  description = "Realm name — doubles as the tenant identifier (e.g. sim2, acme)."
   type        = string
 }
 
-variable "azure_app_client_id" {
-  description = "Client ID (application ID) of the NX Cloud enterprise app in Azure AD. Used to construct the federation metadata URL."
+# ── Identity hierarchy ────────────────────────────────────────────────────────
+
+variable "tenant_orgs" {
+  description = "Organizations within this realm. Map of org_name → { code }."
+  type = map(object({
+    code = string
+  }))
+  default = {
+    northwind = { code = "nw" }
+  }
+}
+
+variable "environments" {
+  description = "Environment names to provision groups for."
+  type        = list(string)
+  default     = ["dev", "tst", "qa", "qa2", "prd"]
+}
+
+variable "roles" {
+  description = "Role names to provision per environment."
+  type        = list(string)
+  default     = ["admin", "user", "viewer"]
+}
+
+# ── Naming ────────────────────────────────────────────────────────────────────
+
+variable "group_prefix" {
+  description = "Prefix for group display names (e.g. 'sg' → sg-nw-dev-admin)."
   type        = string
+  default     = "sg"
 }
 
-variable "azure_ad_signing_certificate" {
-  description = <<-EOT
-    Base64-encoded (no PEM headers) public certificate used by Azure AD to sign SAML assertions.
-    Retrieve after terragrunt apply of ad-tenant:
-      az rest --method GET \
-        --url "https://graph.microsoft.com/v1.0/servicePrincipals/<sp-object-id>/tokenSigningCertificates" \
-        --headers "Authorization=Bearer $(az account get-access-token --tenant <tenant-id> --resource-type ms-graph --query accessToken -o tsv)" \
-        | jq -r '.value[] | select(.isActive) | .rawValue'
-  EOT
+# ── Users ─────────────────────────────────────────────────────────────────────
+
+variable "users_enabled" {
+  description = "Whether to create internal Keycloak users and group memberships."
+  type        = bool
+  default     = true
+}
+
+variable "user_password_length" {
+  description = "Length of generated initial passwords (minimum 16)."
+  type        = number
+  default     = 20
+
+  validation {
+    condition     = var.user_password_length >= 16
+    error_message = "user_password_length must be at least 16."
+  }
+}
+
+variable "user_email_base_domain" {
+  description = "Base email domain. Full email = {org_code}-{role}@{realm}.{base_domain}."
   type        = string
-  sensitive   = true
+  default     = "nxteam.dev"
 }
 
-# ── SAML claim attribute names ────────────────────────────────────────────────
-# These must match the SamlClaimType values in the Azure AD claims mapping policy.
+# ── NX Cloud SAML ─────────────────────────────────────────────────────────────
 
-variable "saml_attribute_email" {
-  description = "SAML attribute name for email. Must match SamlClaimType in the Azure AD claims mapping policy."
+variable "keycloak_url" {
+  description = "Keycloak base URL (e.g. https://idp-keycloak.cloud.nxteam.dev/auth). Used to compute SAML metadata outputs."
   type        = string
-  default     = "email"
+  default     = ""
 }
 
-variable "saml_attribute_first_name" {
-  description = "SAML attribute name for given name."
+variable "nxcloud_enabled" {
+  description = "Whether to create the NX Cloud SAML client."
+  type        = bool
+  default     = false
+}
+
+variable "nxcloud_url" {
+  description = "NX Cloud base URL (e.g. https://nx.cloud.nxteam.dev). Used for SAML callback URI."
   type        = string
-  default     = "firstName"
-}
-
-variable "saml_attribute_last_name" {
-  description = "SAML attribute name for surname."
-  type        = string
-  default     = "lastName"
-}
-
-variable "saml_attribute_groups" {
-  description = "SAML attribute name carrying Azure AD group display names."
-  type        = string
-  default     = "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups"
-}
-
-# ── Group → Role mapping ──────────────────────────────────────────────────────
-
-variable "group_display_names" {
-  description = <<-EOT
-    Map of '<tenant>-<org>-<env>-<role>' → group display name.
-    Sourced from the ad-tenant module output 'group_display_names'.
-    Each entry produces a Keycloak realm role and a SAML attribute-to-role mapper.
-  EOT
-  type        = map(string)
-}
-
-variable "external_group_display_names" {
-  description = <<-EOT
-    Map of group key → display name for existing Azure AD groups added to SSO via sso_external_groups.
-    Sourced from the ad-tenant module output 'external_group_display_names'.
-    Each entry produces a Keycloak realm role and a SAML attribute-to-role mapper.
-  EOT
-  type    = map(string)
-  default = {}
+  default     = ""
 }

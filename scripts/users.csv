@@ -1,4 +1,0 @@
-tenant_id,upn_domain,tenant_key,org_code,org_name,role,suffix,first_name,last_name,security_groups,display_name,usage_location,password,group_prefix
-,sreazrwussim1.onmicrosoft.com,sim1,nw,northwind,admin,jdoe,Jane,Doe,sg-sim1-nw-dev-admin,,US,,sg
-,sreazrwussim1.onmicrosoft.com,sim1,nw,northwind,user,asmith,Alice,Smith,sg-sim1-nw-dev-user|sg-sim1-nw-tst-user,,US,,sg
-,sreazrwussim1.onmicrosoft.com,sim1,nw,northwind,viewer,bjones,Bob,Jones,sg-sim1-nw-dev-viewer,,US,,sg
